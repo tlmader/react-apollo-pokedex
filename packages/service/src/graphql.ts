@@ -1,11 +1,5 @@
-import { ApolloServer, gql } from 'apollo-server-lambda';
-
-// Construct a schema, using GraphQL schema language
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
+import { ApolloServer } from 'apollo-server-lambda';
+import typeDefs from './typeDefs.graphql';
 
 // Provide resolver functions for your schema fields
 const resolvers = {

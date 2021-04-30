@@ -4,7 +4,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "sls offline",
-    "deploy": "sls deploy"
+    "deploy": "sls deploy",
+    "deploy-dev": "NODE_ENV=development yarn deploy"
   },
   "dependencies": {
     "apollo-server-lambda": "^2.24.0"
