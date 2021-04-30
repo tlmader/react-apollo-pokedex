@@ -1,3 +1,5 @@
+.webpack
+
 # Created by https://www.toptal.com/developers/gitignore/api/yarn,vscode,serverless,react,cypressio
 # Edit at https://www.toptal.com/developers/gitignore?templates=yarn,vscode,serverless,react,cypressio
 
@@ -28,6 +30,7 @@ sketch
 
 ### Serverless ###
 # Ignore build directory
+.build
 .serverless
 
 ### vscode ###
