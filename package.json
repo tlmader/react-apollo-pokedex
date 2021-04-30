@@ -3,6 +3,7 @@
   "workspaces": [
     "packages/*"
   ],
+  "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install"
