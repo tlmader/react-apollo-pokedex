@@ -6,12 +6,19 @@
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "graphql": "^15.5.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/introspection": "1.18.2",
+    "@graphql-codegen/typescript": "^1.22.0",
+    "@graphql-codegen/typescript-operations": "^1.17.16",
+    "@graphql-codegen/typescript-react-apollo": "2.2.4",
+    "@graphql-codegen/typescript-resolvers": "^1.19.1",
     "@tsconfig/recommended": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
@@ -22,5 +29,8 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "graphql": "^15.5.0"
   }
 }
