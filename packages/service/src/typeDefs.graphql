@@ -1,3 +1,31 @@
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type PokemonNode {
+  id: ID!
+  name: String
+}
+
+type PokemonEdge {
+  cursor: String!
+  node: PokemonNode
+}
+
+type PokemonConnection {
+  edges: [PokemonEdge]
+  pageInfo: PageInfo!
+}
+
+input PokemonFilterInput
+
 type Query {
-  hello: String
+  listPokemon(
+    filter: PokemonFilterInput
+    sort: PokemonSortInput
+  ): PokemonConnection
+  countPokemon(filter: PokemonFilterInput): Int
 }

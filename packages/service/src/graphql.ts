@@ -1,12 +1,6 @@
 import { ApolloServer } from 'apollo-server-lambda';
 import typeDefs from './typeDefs.graphql';
-
-// Provide resolver functions for your schema fields
-const resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-  },
-};
+import { resolvers } from './resolvers';
 
 const server = new ApolloServer({
   typeDefs,
