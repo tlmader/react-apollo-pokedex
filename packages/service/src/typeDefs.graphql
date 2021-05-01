@@ -7,7 +7,7 @@ type PageInfo {
 
 type PokemonNode {
   id: ID!
-  name: String
+  name: String!
 }
 
 type PokemonEdge {
@@ -15,17 +15,20 @@ type PokemonEdge {
   node: PokemonNode
 }
 
-type PokemonConnection {
-  edges: [PokemonEdge]
-  pageInfo: PageInfo!
-}
+# type PokemonConnection {
+#   edges: [PokemonEdge]
+#   pageInfo: PageInfo!
+# }
 
-input PokemonFilterInput
+# input PokemonFilterInput {
+
+# }
 
 type Query {
-  listPokemon(
-    filter: PokemonFilterInput
-    sort: PokemonSortInput
-  ): PokemonConnection
-  countPokemon(filter: PokemonFilterInput): Int
+  getPokemon(name: String!): PokemonNode
+  # listPokemon(
+  #   filter: PokemonFilterInput
+  #   sort: PokemonSortInput
+  # ): PokemonConnection
+  # countPokemon(filter: PokemonFilterInput): Int
 }
