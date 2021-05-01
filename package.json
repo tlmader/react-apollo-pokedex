@@ -10,7 +10,8 @@
     "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "graphql": "^15.5.0"
+    "graphql": "^15.5.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "1.21.4",
@@ -20,6 +21,7 @@
     "@graphql-codegen/typescript-react-apollo": "2.2.4",
     "@graphql-codegen/typescript-resolvers": "^1.19.1",
     "@tsconfig/recommended": "^1.0.1",
+    "@types/lodash": "^4.14.168",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.25.0",
@@ -29,8 +31,5 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "typescript": "^4.2.4"
-  },
-  "dependencies": {
-    "graphql": "^15.5.0"
   }
 }

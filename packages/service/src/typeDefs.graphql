@@ -5,9 +5,33 @@ type PageInfo {
   endCursor: String
 }
 
-type PokemonNode {
-  id: ID!
+type Item {
   name: String!
+}
+
+type Stat {
+  name: String!
+  baseStat: Int!
+}
+
+type Sprites {
+  backDefault: String!
+  frontDefault: String!
+}
+
+type PokemonNode {
+  id: Int!
+  name: String!
+  baseExperience: Int!
+  height: Int!
+  order: Int!
+  weight: Int!
+  abilities: [Item]!
+  heldItems: [Item]!
+  moves: [Item]!
+  sprites: Sprites!
+  stats: [Stat]!
+  types: [Item]!
 }
 
 type PokemonEdge {
@@ -15,20 +39,23 @@ type PokemonEdge {
   node: PokemonNode
 }
 
-# type PokemonConnection {
-#   edges: [PokemonEdge]
-#   pageInfo: PageInfo!
-# }
+type PokemonConnection {
+  edges: [PokemonEdge]
+  pageInfo: PageInfo!
+}
 
-# input PokemonFilterInput {
+input StringFilterInput {
+  contains: String
+}
 
-# }
+input PokemonFilterInput {
+  name: StringFilterInput
+  type: String
+}
 
 type Query {
   getPokemon(name: String!): PokemonNode
-  # listPokemon(
-  #   filter: PokemonFilterInput
-  #   sort: PokemonSortInput
-  # ): PokemonConnection
+  listPokemon(filter: PokemonFilterInput): # sort: PokemonSortInput
+  PokemonConnection
   # countPokemon(filter: PokemonFilterInput): Int
 }

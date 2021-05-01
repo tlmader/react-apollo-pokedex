@@ -1,4 +1,5 @@
 import { Context, PokemonNode, Resolvers } from '../types';
+import { pokemonToPokemonNode } from '../utils/transform';
 
 // Provide resolver functions for your schema fields
 export const resolvers: Resolvers = {
@@ -9,10 +10,7 @@ export const resolvers: Resolvers = {
       { dataSources }: Context,
     ): Promise<PokemonNode> => {
       const pokemon = await dataSources.pokeAPI.getPokemon(name);
-      return {
-        id: pokemon.id,
-        name: pokemon.name,
-      };
+      return pokemonToPokemonNode(pokemon);
     },
   },
 };
