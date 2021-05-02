@@ -11,8 +11,8 @@ export type NamedAPIResource = {
  */
 export type NamedAPIResourceList = {
   count: number;
-  next: string;
-  previous: string;
+  next?: string;
+  previous?: string;
   results: NamedAPIResource[];
 };
 

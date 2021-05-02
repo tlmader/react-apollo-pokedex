@@ -1,5 +1,5 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { Pokemon } from '../types';
+import { NamedAPIResourceList, Pokemon } from '../types';
 
 export class PokeAPI extends RESTDataSource {
   constructor() {
@@ -9,15 +9,29 @@ export class PokeAPI extends RESTDataSource {
     this.baseURL = 'https://pokeapi.co/api/v2/';
   }
 
-  async getPokemon(
-    name: string,
-    limit?: number,
-    offset?: number,
-  ): Promise<Pokemon> {
+  /**
+   * https://pokeapi.co/docs/v2#pokemon
+   */
+  async getPokemon(name: string): Promise<Pokemon> {
     // Send a GET request to the specified endpoint
-    return this.get(`pokemon/${name}`, {
-      limit,
-      offset,
+    return this.get(`pokemon/${name}`);
+  }
+
+  /**
+   * https://pokeapi.co/docs/v2#resource-listspagination-section
+   *
+   * @param limit - API returns 20 resources by default
+   * @param offset - Used to move to the next page
+   */
+  async getPokemonResourceList(
+    limit?: number | null,
+    offset?: number | null,
+  ): Promise<NamedAPIResourceList> {
+    return this.get(`pokemon`, {
+      // Do not include if null
+      limit: limit === null ? undefined : limit,
+      // Do not include if 0 or null
+      offset: offset || undefined,
     });
   }
 }

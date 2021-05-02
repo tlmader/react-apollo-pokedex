@@ -55,7 +55,11 @@ input PokemonFilterInput {
 
 type Query {
   getPokemon(name: String!): PokemonNode
-  listPokemon(filter: PokemonFilterInput): # sort: PokemonSortInput
-  PokemonConnection
+  listPokemon(
+    filter: PokemonFilterInput
+    # sort: PokemonSortInput
+    first: Int
+    after: String
+  ): PokemonConnection
   # countPokemon(filter: PokemonFilterInput): Int
 }

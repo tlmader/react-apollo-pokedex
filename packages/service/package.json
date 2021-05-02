@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "apollo-datasource-rest": "^0.13.0",
-    "apollo-server-lambda": "^2.24.0"
+    "apollo-server-lambda": "^2.24.0",
+    "base64-url": "^2.3.3"
   },
   "devDependencies": {
     "@graphql-codegen/typescript-resolvers": "^1.19.1",
+    "@types/base64-url": "^2.2.0",
     "serverless-offline": "^7.0.0",
     "serverless-plugin-monorepo": "^0.10.0",
     "serverless-plugin-typescript": "^1.1.9",
