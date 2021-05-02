@@ -1,5 +1,5 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { NamedAPIResourceList, Pokemon } from '../types';
+import { NamedAPIResourceList, Pokemon, Type } from '../types';
 
 export class PokeAPI extends RESTDataSource {
   constructor() {
@@ -33,5 +33,12 @@ export class PokeAPI extends RESTDataSource {
       // Do not include if 0 or null
       offset: offset || undefined,
     });
+  }
+
+  /**
+   * https://pokeapi.co/docs/v2#types
+   */
+  async getType(type: string): Promise<Type> {
+    return this.get(`type/${type}`);
   }
 }
