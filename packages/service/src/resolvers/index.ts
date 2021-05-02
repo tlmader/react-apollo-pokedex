@@ -23,6 +23,9 @@ export const resolvers: Resolvers = {
       { after, first, filter },
       { dataSources }: Context,
     ): Promise<PokemonConnection> => {
+      if (first && first > 50) {
+        throw new Error('Please use a first value that is 50 or lower.');
+      }
       // Add 1 to fromCursor result so we get results after the given cursor
       const offset = after ? fromCursor(after) + 1 : 0;
 
