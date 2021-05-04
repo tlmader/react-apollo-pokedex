@@ -1,4 +1,7 @@
 service: react-apollo-pokedex
+custom:
+  serverless-offline:
+    httpPort: 4000
 plugins:
   - serverless-offline
   - serverless-plugin-monorepo
