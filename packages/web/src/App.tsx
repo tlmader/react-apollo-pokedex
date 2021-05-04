@@ -1,6 +1,7 @@
 import { ApolloProvider } from '@apollo/client';
 import '@fontsource/roboto';
 import './App.css';
+import { Header } from './components';
 import logo from './logo.svg';
 import { client } from './utils/apollo';
 
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <div className="App">
+        <Header />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
