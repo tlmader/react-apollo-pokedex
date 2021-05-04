@@ -1,4 +1,5 @@
-import { Pokemon, PokemonEdge, PokemonNode } from '../types';
+import { PokemonEdge, PokemonNode } from 'generated-types';
+import { Pokemon } from '../types';
 import { toCursor } from './cursor';
 import { formatName } from './string';
 

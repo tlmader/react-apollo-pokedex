@@ -1,11 +1,10 @@
 import {
-  Context,
-  NamedAPIResource,
   PokemonConnection,
   PokemonEdge,
   PokemonNode,
   Resolvers,
-} from '../types';
+} from 'generated-types';
+import { Context, NamedAPIResource } from '../types';
 import { fromCursor } from '../utils/cursor';
 import { pokemonToEdge, pokemonToPokemonNode } from '../utils/transform';
 

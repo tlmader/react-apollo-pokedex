@@ -1,5 +1,11 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
   "include": ["packages/**/*", ".eslintrc.js"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "generated-types": ["__generated__/types.ts"]
+    }
+  },
   "exclude": ["node_modules"]
 }

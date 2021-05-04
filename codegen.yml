@@ -1,14 +1,16 @@
 overwrite: true
 schema: 'packages/service/src/typeDefs.graphql'
-# documents: 'src/**/*.graphql'
 generates:
-  packages/service/src/types/__generated__/graphql.ts:
+  __generated__/types.ts:
     plugins:
       - 'typescript'
       - 'typescript-resolvers'
 
-  packages/web/src/__generated__/schema.ts:
+  packages/web/src/operations:
+    documents: 'packages/web/src/**/*.graphql'
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: '~generated-types'
+      folder: __generated__
     plugins:
-      - 'typescript'
-      - 'typescript-operations'
-      - 'typescript-react-apollo'
+      - typescript-operations
