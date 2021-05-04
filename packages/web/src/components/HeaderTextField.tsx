@@ -8,11 +8,11 @@ import {
   Theme,
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     search: {
+      margin: theme.spacing(1, 1, 1, 1),
       padding: theme.spacing(1, 1, 1, 2),
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
