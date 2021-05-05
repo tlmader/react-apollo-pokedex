@@ -12,7 +12,6 @@ import SearchIcon from '@material-ui/icons/Search';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     search: {
-      margin: theme.spacing(1, 1, 1, 1),
       padding: theme.spacing(1, 1, 1, 2),
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
@@ -20,9 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 0.25),
       },
-      marginLeft: 0,
       [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(3),
         width: 'auto',
       },
     },
@@ -56,18 +53,18 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const SearchInput = () => {
-  const classes = useStyles();
+  const styles = useStyles();
 
   return (
-    <div className={classes.search}>
-      <div className={classes.searchIcon}>
+    <div className={styles.search}>
+      <div className={styles.searchIcon}>
         <SearchIcon />
       </div>
       <InputBase
         placeholder="Search…"
         classes={{
-          root: classes.inputRoot,
-          input: classes.inputInput,
+          root: styles.inputRoot,
+          input: styles.inputInput,
         }}
         inputProps={{ 'aria-label': 'search' }}
       />
@@ -76,9 +73,10 @@ export const SearchInput = () => {
 };
 
 export const HeaderTextField = (textFieldProps: TextFieldProps) => {
-  const classes = useStyles();
+  const styles = useStyles();
+
   return (
-    <div className={classes.search}>
+    <div className={styles.search}>
       {/* @ts-ignore - disableUnderline is missing in InputProps */}
       <TextField
         {...textFieldProps}
@@ -86,8 +84,8 @@ export const HeaderTextField = (textFieldProps: TextFieldProps) => {
           ...textFieldProps.InputProps,
           disableUnderline: true,
           classes: {
-            root: classes.inputRoot,
-            input: classes.inputInput,
+            root: styles.inputRoot,
+            input: styles.inputInput,
           },
         }}
       />

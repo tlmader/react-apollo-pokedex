@@ -9,6 +9,9 @@ import { TypeFilter } from './TypeFilter';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    toolbarRoot: {
+      gridGap: theme.spacing(2),
+    },
     title: {
       display: 'none',
       [theme.breakpoints.up('sm')]: {
@@ -19,12 +22,16 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const Header = () => {
-  const classes = useStyles();
+  const styles = useStyles();
 
   return (
     <AppBar position="static">
-      <Toolbar>
-        <Typography className={classes.title} variant="h6" noWrap>
+      <Toolbar
+        classes={{
+          root: styles.toolbarRoot,
+        }}
+      >
+        <Typography className={styles.title} variant="h6" noWrap>
           React Apollo Pokédex
         </Typography>
         <SearchInput />
