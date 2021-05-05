@@ -1,18 +1,12 @@
-import { CardContent, Typography } from '@material-ui/core';
+import { CardContent, Divider, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { useRecoilValue } from 'recoil';
-import { selectedPokemonState } from '../../state';
+import { usePokemonDetails } from '../hooks';
+import { Loading } from '../Loading';
 import { SpriteView } from './SpriteView';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-  },
-  media: {
-    height: 300,
-    maxWidth: 300,
-    marginLeft: 'auto',
-    marginRight: 'auto',
   },
   cardActions: {
     justifyContent: 'center',
@@ -20,15 +14,20 @@ const useStyles = makeStyles({
 });
 
 export const PokemonDetails = () => {
+  const { pokemon, loading } = usePokemonDetails();
+
   const styles = useStyles();
 
-  const pokemon = useRecoilValue(selectedPokemonState);
+  if (loading) {
+    return <Loading title="Loading Pokémon Details…" />;
+  }
 
   return !pokemon ? (
     <Typography>Select a Pokémon to view details.</Typography>
   ) : (
     <>
       <SpriteView />
+      <Divider />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
           {pokemon.name}

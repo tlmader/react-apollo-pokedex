@@ -19,12 +19,8 @@ import {
 // Provide resolver functions for your schema fields
 export const resolvers: Resolvers = {
   Query: {
-    getPokemon: (
-      _,
-      { name },
-      { dataSources }: Context,
-    ): Promise<PokemonNode> => {
-      return dataSources.pokeAPI.getPokemon(name).then(pokemonToPokemonNode);
+    getPokemon: (_, { id }, { dataSources }: Context): Promise<PokemonNode> => {
+      return dataSources.pokeAPI.getPokemon(id).then(pokemonToPokemonNode);
     },
     listPokemon: async (
       _,

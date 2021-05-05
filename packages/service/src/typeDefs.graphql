@@ -31,7 +31,7 @@ type Sprites {
 }
 
 type PokemonNode {
-  id: Int!
+  id: ID!
   name: String!
   baseExperience: Int!
   height: Int!
@@ -71,7 +71,7 @@ input PokemonSortInput {
 }
 
 type Query {
-  getPokemon(name: String!): PokemonNode
+  getPokemon(id: ID!): PokemonNode
   listPokemon(
     filter: PokemonFilterInput
     sort: PokemonSortInput

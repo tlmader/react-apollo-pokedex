@@ -10,7 +10,7 @@ import { toCursor } from './cursor';
 import { formatName } from './string';
 
 export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
-  id: pokemon.id,
+  id: pokemon.id.toString(),
   name: formatName(pokemon.name),
   order: pokemon.order,
   height: pokemon.height,

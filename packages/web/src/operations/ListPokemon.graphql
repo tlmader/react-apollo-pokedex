@@ -13,13 +13,6 @@ query ListPokemon(
         order
         sprites {
           frontDefault
-          backDefault
-          backFemale
-          backShiny
-          backShinyFemale
-          frontFemale
-          frontShiny
-          frontShinyFemale
         }
       }
     }

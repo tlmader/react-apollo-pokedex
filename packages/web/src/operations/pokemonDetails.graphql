@@ -1,0 +1,17 @@
+query PokemonDetails($id: ID!) {
+  getPokemon(id: $id) {
+    id
+    name
+    order
+    sprites {
+      frontDefault
+      backDefault
+      backFemale
+      backShiny
+      backShinyFemale
+      frontFemale
+      frontShiny
+      frontShinyFemale
+    }
+  }
+}

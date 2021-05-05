@@ -1,16 +1,15 @@
 import { Button, CardActions, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
-import { useRecoilValue } from 'recoil';
-import { selectedPokemonState } from '../../state';
+import { usePokemonDetails } from '../hooks';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
   media: {
-    height: 250,
-    maxWidth: 250,
+    height: 200,
+    maxWidth: 200,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -20,12 +19,11 @@ const useStyles = makeStyles({
 });
 
 export const SpriteView = () => {
-  const styles = useStyles();
+  const { pokemon } = usePokemonDetails();
+
   const [viewBackSprite, setViewBackSprite] = useState(false);
   const [viewFemaleSprite, setViewFemaleSprite] = useState(false);
   const [viewShinySprite, setViewShinySprite] = useState(false);
-
-  const pokemon = useRecoilValue(selectedPokemonState);
 
   // Reset sprite view on pokemon change
   useEffect(() => {
@@ -72,6 +70,8 @@ export const SpriteView = () => {
       }
     }
   };
+
+  const styles = useStyles();
 
   return pokemon ? (
     <>

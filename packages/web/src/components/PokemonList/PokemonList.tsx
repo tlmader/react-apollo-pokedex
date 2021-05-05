@@ -1,21 +1,25 @@
-import { CircularProgress, Typography } from '@material-ui/core';
+import { Divider, Toolbar, Typography } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 import InfiniteLoader from 'react-window-infinite-loader';
 import { PokemonNode } from '../../types';
 import { useListPokemon } from '../hooks';
+import { Loading } from '../Loading';
 import { PokemonListItem } from './PokemonListItem';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      height: '100%',
+      // Adjust for header and divider
+      height: 'calc(100% - 65px)',
       width: '100%',
     },
-    mainLoader: {
+    message: {
       padding: theme.spacing(2),
+      display: 'grid',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     circularProgress: {
       display: 'grid',
@@ -30,29 +34,39 @@ const useStyles = makeStyles((theme: Theme) =>
 export const PokemonList = () => {
   const styles = useStyles();
 
+  const { items, loading, hasNextPage, fetchNextPage } = useListPokemon();
+
   const Row = ({ index, style }: ListChildComponentProps<PokemonNode>) => {
     const item = items[index];
     return index === items.length ? (
-      <div style={style} className={styles.circularProgress}>
-        <CircularProgress title="Loading" />
-        <Typography variant="overline">Loading more Pokémon…</Typography>
-      </div>
+      <Loading style={style} title="Loading more Pokémon…" />
     ) : (
       <PokemonListItem style={style} key={item?.name} pokemon={item} />
     );
   };
 
-  const { items, loading, hasNextPage, fetchNextPage } = useListPokemon();
-
   const itemCount = hasNextPage ? items.length + 1 : items.length;
 
-  return loading ? (
-    <div className={clsx(styles.mainLoader, styles.circularProgress)}>
-      <CircularProgress title="Loading" />
-      <Typography variant="overline">Loading Pokémon…</Typography>
-    </div>
-  ) : (
+  if (loading) {
+    return <Loading title="Loading Pokémon…" />;
+  }
+
+  if (!itemCount) {
+    return (
+      <div className={styles.message}>
+        <Typography variant="overline">No Pokémon found</Typography>
+      </div>
+    );
+  }
+
+  return (
     <div className={styles.root}>
+      <Toolbar>
+        <Typography variant="overline">
+          {items.length} Pokémon found!
+        </Typography>
+      </Toolbar>
+      <Divider />
       <AutoSizer>
         {({ height, width }) => (
           <InfiniteLoader
