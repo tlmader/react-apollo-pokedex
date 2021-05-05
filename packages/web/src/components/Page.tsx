@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
 import { useListPokemonQuery } from '../operations';
-import { searchState, speciesState, typeState } from '../state';
+import { searchState, sortState, speciesState, typeState } from '../state';
 import { Header } from './Header';
 import logo from './logo.svg';
 import './Page.css';
@@ -9,6 +9,7 @@ export const Page = () => {
   const [search] = useRecoilState(searchState);
   const [type] = useRecoilState(typeState);
   const [species] = useRecoilState(speciesState);
+  const [sort] = useRecoilState(sortState);
 
   const { data } = useListPokemonQuery({
     variables: {
@@ -19,6 +20,7 @@ export const Page = () => {
         species,
         type,
       },
+      sort,
     },
   });
 

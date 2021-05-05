@@ -1,5 +1,10 @@
-query ListPokemon($filter: PokemonFilterInput, $first: Int, $after: String) {
-  listPokemon(filter: $filter, first: $first, after: $after) {
+query ListPokemon(
+  $filter: PokemonFilterInput
+  $sort: PokemonSortInput
+  $first: Int
+  $after: String
+) {
+  listPokemon(filter: $filter, sort: $sort, first: $first, after: $after) {
     edges {
       cursor
       node {

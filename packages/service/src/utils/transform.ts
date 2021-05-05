@@ -1,5 +1,11 @@
-import { PokemonEdge, PokemonNode } from 'generated-types';
-import { NamedAPIResource, Pokemon, Species, Type } from '../types';
+import {
+  NamedAPIResource,
+  Pokemon,
+  PokemonEdge,
+  PokemonNode,
+  Species,
+  Type,
+} from '../types';
 import { toCursor } from './cursor';
 import { formatName } from './string';
 

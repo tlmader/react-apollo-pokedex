@@ -3,6 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { SearchInput } from './SearchInput';
+import { SortRadioGroup } from './SortRadioGroup';
 import { SpeciesFilter } from './SpeciesFilter';
 import { TypeFilter } from './TypeFilter';
 
@@ -29,6 +30,7 @@ export const Header = () => {
         <SearchInput />
         <TypeFilter />
         <SpeciesFilter />
+        <SortRadioGroup />
       </Toolbar>
     </AppBar>
   );

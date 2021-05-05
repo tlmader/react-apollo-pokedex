@@ -1,12 +1,14 @@
+import intersectionBy from 'lodash/intersectionBy';
 import {
+  Context,
+  NamedAPIResource,
   PokemonConnection,
   PokemonEdge,
   PokemonNode,
   Resolvers,
-} from 'generated-types';
-import intersectionBy from 'lodash/intersectionBy';
-import { Context, NamedAPIResource } from '../types';
+} from '../types';
 import { fromCursor } from '../utils/cursor';
+import { sortPokemonResources } from '../utils/sort';
 import {
   pokemonToEdge,
   pokemonToPokemonNode,
@@ -26,7 +28,7 @@ export const resolvers: Resolvers = {
     },
     listPokemon: async (
       _,
-      { after, first, filter },
+      { after, first, filter, sort },
       { dataSources }: Context,
     ): Promise<PokemonConnection> => {
       if (first && first > 50) {
@@ -67,8 +69,8 @@ export const resolvers: Resolvers = {
         } else {
           resources = resultResources[0];
         }
-      } else if (filter?.name) {
-        // Filtering by name requires us to get the entire resource list to filter or sort on
+      } else if (sort || filter?.name) {
+        // Sorting or filtering by name requires us to get the entire resource list to filter or sort on
         const { results } = await dataSources.pokeAPI.getPokemonResourceList(
           9999,
         );
@@ -87,23 +89,29 @@ export const resolvers: Resolvers = {
 
       // These values may be adjusted in the filter steps
       // Handle all filtering
-      if (filter) {
-        let filteredResources = resources;
+      if (sort || filter) {
+        // Temporary array where we will perform all sorting/filtering on
+        let modifiedResources = resources;
         // Perform name filter on resources
-        if (filter.name?.contains) {
+        if (filter?.name?.contains) {
           const { contains } = filter.name;
-          filteredResources = filteredResources.filter((resource) =>
+          modifiedResources = modifiedResources.filter((resource) =>
             resource.name.includes(contains),
           );
         }
+        // Apply sort to resources
+        if (sort) {
+          modifiedResources = sortPokemonResources(sort, resources);
+        }
+
         const pageSize = first || 20;
         // Update results to contain the page of the filtered resources
-        resources = filteredResources.slice(offset, offset + pageSize);
+        resources = modifiedResources.slice(offset, offset + pageSize);
 
         // Update previous and next to reflect filtered list
         hasPreviousPage = offset > 0;
         // Set to true if we have remaining filtered resources
-        hasNextPage = offset + pageSize < filteredResources.length;
+        hasNextPage = offset + pageSize < modifiedResources.length;
       }
       // Retrieve the complete pokemon data for each resource and convert to edges
       const pokemons = await Promise.all(
