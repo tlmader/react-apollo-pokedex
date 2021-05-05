@@ -20,5 +20,6 @@ query ListPokemon(
       hasNextPage
       endCursor
     }
+    totalCount
   }
 }

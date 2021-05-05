@@ -51,6 +51,7 @@ type PokemonEdge {
 }
 
 type PokemonConnection {
+  totalCount: Int!
   edges: [PokemonEdge]!
   pageInfo: PageInfo!
 }

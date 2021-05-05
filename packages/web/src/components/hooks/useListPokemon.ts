@@ -1,10 +1,10 @@
+import produce from 'immer';
 import { useRecoilValue } from 'recoil';
 import {
   ListPokemonQueryVariables,
   useListPokemonQuery,
 } from '../../operations';
 import { searchState, sortState, speciesState, typeState } from '../../state';
-import produce from 'immer';
 
 export const useListPokemon = () => {
   const search = useRecoilValue(searchState);
@@ -41,6 +41,7 @@ export const useListPokemon = () => {
   const items = data?.listPokemon?.edges?.map((edge) => edge?.node) || [];
   const endCursor = data?.listPokemon?.pageInfo?.endCursor;
   const hasNextPage = data?.listPokemon?.pageInfo?.hasNextPage;
+  const totalCount = data?.listPokemon?.totalCount;
 
   const fetchNextPage = () => {
     if (hasNextPage && endCursor) {
@@ -54,5 +55,5 @@ export const useListPokemon = () => {
     return null;
   };
 
-  return { items, loading, hasNextPage, fetchNextPage };
+  return { items, loading, hasNextPage, fetchNextPage, totalCount };
 };

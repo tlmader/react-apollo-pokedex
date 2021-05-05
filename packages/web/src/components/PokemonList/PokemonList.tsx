@@ -34,7 +34,13 @@ const useStyles = makeStyles((theme: Theme) =>
 export const PokemonList = () => {
   const styles = useStyles();
 
-  const { items, loading, hasNextPage, fetchNextPage } = useListPokemon();
+  const {
+    items,
+    loading,
+    hasNextPage,
+    fetchNextPage,
+    totalCount,
+  } = useListPokemon();
 
   const Row = ({ index, style }: ListChildComponentProps<PokemonNode>) => {
     const item = items[index];
@@ -62,9 +68,7 @@ export const PokemonList = () => {
   return (
     <div className={styles.root}>
       <Toolbar>
-        <Typography variant="overline">
-          {items.length} Pokémon found!
-        </Typography>
+        <Typography variant="overline">{totalCount} Pokémon found!</Typography>
       </Toolbar>
       <Divider />
       <AutoSizer>
