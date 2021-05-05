@@ -50,6 +50,7 @@ input StringFilterInput {
 
 input PokemonFilterInput {
   name: StringFilterInput
+  species: String
   type: String
 }
 

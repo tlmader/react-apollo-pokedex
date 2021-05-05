@@ -4,9 +4,15 @@ import {
   PokemonNode,
   Resolvers,
 } from 'generated-types';
+import intersectionBy from 'lodash/intersectionBy';
 import { Context, NamedAPIResource } from '../types';
 import { fromCursor } from '../utils/cursor';
-import { pokemonToEdge, pokemonToPokemonNode } from '../utils/transform';
+import {
+  pokemonToEdge,
+  pokemonToPokemonNode,
+  speciesToPokemonResource,
+  typeToPokemonResource,
+} from '../utils/transform';
 
 // Provide resolver functions for your schema fields
 export const resolvers: Resolvers = {
@@ -32,11 +38,35 @@ export const resolvers: Resolvers = {
       let resources: NamedAPIResource[] = [];
       let hasPreviousPage = false;
       let hasNextPage = false;
-      if (filter?.type) {
-        // The type endpoints
-        const { pokemon } = await dataSources.pokeAPI.getType(filter.type);
-        // Flatten NamedAPIResources
-        resources = pokemon.map((p) => p.pokemon);
+      if (filter?.species || filter?.type) {
+        // Add the required requests
+        const requests = [];
+        if (filter?.species) {
+          requests.push(
+            dataSources.pokeAPI
+              .getSpecies(filter.species)
+              .then(speciesToPokemonResource),
+          );
+        }
+        if (filter?.type) {
+          requests.push(
+            dataSources.pokeAPI
+              .getType(filter.type)
+              .then(typeToPokemonResource),
+          );
+        }
+        // Perform all filter requests concurrently
+        const resultResources = await Promise.all(requests);
+        if (resultResources.length > 1) {
+          // Intersect all Pokemon resources from all filter requests
+          resources = intersectionBy(
+            resultResources[0],
+            resultResources[1],
+            (resource) => resource.name,
+          );
+        } else {
+          resources = resultResources[0];
+        }
       } else if (filter?.name) {
         // Filtering by name requires us to get the entire resource list to filter or sort on
         const { results } = await dataSources.pokeAPI.getPokemonResourceList(

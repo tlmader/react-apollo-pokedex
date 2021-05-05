@@ -16,6 +16,7 @@ export const Page = () => {
         name: {
           contains: search,
         },
+        species,
         type,
       },
     },

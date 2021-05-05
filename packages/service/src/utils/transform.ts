@@ -1,5 +1,5 @@
 import { PokemonEdge, PokemonNode } from 'generated-types';
-import { Pokemon } from '../types';
+import { NamedAPIResource, Pokemon, Species, Type } from '../types';
 import { toCursor } from './cursor';
 import { formatName } from './string';
 
@@ -43,3 +43,10 @@ export const pokemonToEdge = (offset: number) => (
   cursor: toCursor(offset + index),
   node: pokemonToPokemonNode(pokemon),
 });
+
+export const speciesToPokemonResource = (
+  species: Species,
+): NamedAPIResource[] => species.varieties.map((variety) => variety.pokemon);
+
+export const typeToPokemonResource = (type: Type): NamedAPIResource[] =>
+  type.pokemon.map((p) => p.pokemon);

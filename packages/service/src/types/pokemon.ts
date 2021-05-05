@@ -56,3 +56,11 @@ export type Type = {
     pokemon: NamedAPIResource;
   }[];
 };
+
+export type Species = {
+  id: number;
+  name: string;
+  varieties: {
+    pokemon: NamedAPIResource;
+  }[];
+};
