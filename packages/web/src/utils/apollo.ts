@@ -1,21 +1,15 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { gql } from '@apollo/client';
+import { ApolloClient, gql, InMemoryCache } from '@apollo/client';
+import { relayStylePagination } from '@apollo/client/utilities';
 
 export const client = new ApolloClient({
   uri: 'http://localhost:4000/dev/graphql',
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      Query: {
+        fields: {
+          listPokemon: relayStylePagination(['filter', 'sort']),
+        },
+      },
+    },
+  }),
 });
-
-client
-  .query({
-    query: gql`
-      query GetPokemon {
-        getPokemon(name: "pikachu") {
-          id
-          name
-        }
-      }
-    `,
-  })
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));

@@ -10,11 +10,16 @@ query ListPokemon(
       node {
         id
         name
+        order
         sprites {
           frontDefault
           backDefault
         }
       }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
     }
   }
 }

@@ -33,7 +33,6 @@ export const SortRadioGroup = () => {
     if (event.target.value === 'order') {
       setSort({ order: Sort.Asc });
     }
-    console.log(event.target.value);
     if (event.target.value === 'name') {
       setSort({ name: Sort.Asc });
     }

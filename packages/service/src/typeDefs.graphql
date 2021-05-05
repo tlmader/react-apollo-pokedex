@@ -41,11 +41,11 @@ type PokemonNode {
 
 type PokemonEdge {
   cursor: String!
-  node: PokemonNode
+  node: PokemonNode!
 }
 
 type PokemonConnection {
-  edges: [PokemonEdge]
+  edges: [PokemonEdge]!
   pageInfo: PageInfo!
 }
 
