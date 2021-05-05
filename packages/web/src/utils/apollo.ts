@@ -1,4 +1,4 @@
-import { ApolloClient, gql, InMemoryCache } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { relayStylePagination } from '@apollo/client/utilities';
 
 export const client = new ApolloClient({
