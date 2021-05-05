@@ -14,11 +14,16 @@ query ListPokemon(
         sprites {
           frontDefault
           backDefault
+          backFemale
+          backShiny
+          backShinyFemale
+          frontFemale
+          frontShiny
+          frontShinyFemale
         }
       }
     }
     pageInfo {
-      count
       hasNextPage
       endCursor
     }

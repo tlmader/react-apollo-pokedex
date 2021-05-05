@@ -6,6 +6,7 @@ import {
   Theme,
 } from '@material-ui/core';
 import { Header } from './Header';
+import { PokemonDetails } from './PokemonDetails/PokemonDetails';
 import { PokemonList } from './PokemonList';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -62,7 +63,7 @@ export const Page = () => {
         </Grid>
         <Grid className={styles.gridItem} item xs={12} sm={6} md={6}>
           <Paper className={styles.paper} elevation={2}>
-            Details!
+            <PokemonDetails />
           </Paper>
         </Grid>
       </Grid>

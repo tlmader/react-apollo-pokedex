@@ -8,6 +8,8 @@ import {
   Theme,
 } from '@material-ui/core';
 import { CSSProperties, memo } from 'react';
+import { useSetRecoilState } from 'recoil';
+import { selectedPokemonState } from '../../state';
 import { PokemonNode } from '../../types';
 
 export type PokemonListItemProps = {
@@ -21,9 +23,19 @@ export const PokemonListItem = memo(function ({
   style,
 }: PokemonListItemProps) {
   const styles = useStyles();
+
+  const setSelectedPokemon = useSetRecoilState(selectedPokemonState);
+
+  const handleClick = () => setSelectedPokemon(pokemon);
+
   return (
     <>
-      <ListItem alignItems="flex-start" style={style}>
+      <ListItem
+        alignItems="flex-start"
+        style={style}
+        button
+        onClick={handleClick}
+      >
         <ListItemAvatar>
           <Avatar
             className={styles.avatar}

@@ -1,5 +1,5 @@
 import { atom } from 'recoil';
-import { PokemonSortInput, Sort } from '../types';
+import { PokemonNode, PokemonSortInput, Sort } from '../types';
 
 export const searchState = atom<string | undefined>({
   key: 'searchState', // unique ID (with respect to other atoms/selectors)
@@ -21,4 +21,9 @@ export const sortState = atom<PokemonSortInput>({
   default: {
     order: Sort.Asc,
   },
+});
+
+export const selectedPokemonState = atom<Partial<PokemonNode> | undefined>({
+  key: 'selectedPokemonState',
+  default: undefined,
 });

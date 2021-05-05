@@ -21,7 +21,13 @@ type Stat {
 
 type Sprites {
   backDefault: String
+  backFemale: String
+  backShiny: String
+  backShinyFemale: String
   frontDefault: String
+  frontFemale: String
+  frontShiny: String
+  frontShinyFemale: String
 }
 
 type PokemonNode {

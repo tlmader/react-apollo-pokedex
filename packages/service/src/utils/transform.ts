@@ -32,6 +32,12 @@ export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
   sprites: {
     frontDefault: pokemon.sprites.front_default,
     backDefault: pokemon.sprites.back_default,
+    frontShiny: pokemon.sprites.front_shiny,
+    backShiny: pokemon.sprites.back_shiny,
+    frontFemale: pokemon.sprites.front_female,
+    backFemale: pokemon.sprites.back_female,
+    frontShinyFemale: pokemon.sprites.front_shiny_female,
+    backShinyFemale: pokemon.sprites.back_shiny_female,
   },
   types: pokemon.types
     // Sort by slot

@@ -56,11 +56,7 @@ export const SortRadioGroup = () => {
           value={sortInputToValue(sort)}
           onChange={handleChange}
         >
-          <FormControlLabel
-            value="order"
-            control={<Radio />}
-            label="Pokédex #"
-          />
+          <FormControlLabel value="order" control={<Radio />} label="Pokédex" />
           <FormControlLabel value="name" control={<Radio />} label="Name" />
         </RadioGroup>
       </FormControl>
