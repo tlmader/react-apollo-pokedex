@@ -1,4 +1,5 @@
 import { useRecoilState } from 'recoil';
+import { useListPokemonQuery } from '../operations';
 import { searchState, speciesState, typeState } from '../state';
 import { Header } from './Header';
 import logo from './logo.svg';
@@ -9,6 +10,17 @@ export const Page = () => {
   const [type] = useRecoilState(typeState);
   const [species] = useRecoilState(speciesState);
 
+  const { data } = useListPokemonQuery({
+    variables: {
+      filter: {
+        name: {
+          contains: search,
+        },
+        type,
+      },
+    },
+  });
+
   return (
     <div className="App">
       <Header />
@@ -18,6 +30,7 @@ export const Page = () => {
           search,
           type,
           species,
+          data,
         })}
         <a
           className="App-link"
