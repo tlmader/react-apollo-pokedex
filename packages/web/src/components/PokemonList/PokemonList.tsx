@@ -1,19 +1,21 @@
 import { CircularProgress, Typography } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import clsx from 'clsx';
+import AutoSizer from 'react-virtualized-auto-sizer';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 import InfiniteLoader from 'react-window-infinite-loader';
 import { PokemonNode } from '../../types';
 import { useListPokemon } from '../hooks';
 import { PokemonListItem } from './PokemonListItem';
-import clsx from 'clsx';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      height: '100%',
       width: '100%',
     },
     mainLoader: {
-      margin: theme.spacing(2),
+      padding: theme.spacing(2),
     },
     circularProgress: {
       display: 'grid',
@@ -50,25 +52,29 @@ export const PokemonList = () => {
       <Typography variant="overline">Loading Pokémon…</Typography>
     </div>
   ) : (
-    <InfiniteLoader
-      isItemLoaded={(index) => index < items.length}
-      itemCount={itemCount}
-      loadMoreItems={fetchNextPage}
-    >
-      {({ onItemsRendered, ref }) => (
-        <div className={styles.root}>
-          <FixedSizeList
-            height={600}
-            width={500}
+    <div className={styles.root}>
+      <AutoSizer>
+        {({ height, width }) => (
+          <InfiniteLoader
+            isItemLoaded={(index) => index < items.length}
             itemCount={itemCount}
-            itemSize={64}
-            onItemsRendered={onItemsRendered}
-            ref={ref}
+            loadMoreItems={fetchNextPage}
           >
-            {Row}
-          </FixedSizeList>
-        </div>
-      )}
-    </InfiniteLoader>
+            {({ onItemsRendered, ref }) => (
+              <FixedSizeList
+                height={height}
+                width={width}
+                itemCount={itemCount}
+                itemSize={64}
+                onItemsRendered={onItemsRendered}
+                ref={ref}
+              >
+                {Row}
+              </FixedSizeList>
+            )}
+          </InfiniteLoader>
+        )}
+      </AutoSizer>
+    </div>
   );
 };

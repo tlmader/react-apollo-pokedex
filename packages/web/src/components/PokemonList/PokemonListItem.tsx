@@ -1,14 +1,13 @@
 import {
   Avatar,
   createStyles,
-  Divider,
   ListItem,
   ListItemAvatar,
   ListItemText,
   makeStyles,
   Theme,
 } from '@material-ui/core';
-import { CSSProperties } from 'react';
+import { CSSProperties, memo } from 'react';
 import { PokemonNode } from '../../types';
 
 export type PokemonListItemProps = {
@@ -16,9 +15,12 @@ export type PokemonListItemProps = {
   style: CSSProperties;
 };
 
-export const PokemonListItem = ({ pokemon, style }: PokemonListItemProps) => {
+// Memo to prevent re-render when resizing screen caused by AutoSizer
+export const PokemonListItem = memo(function ({
+  pokemon,
+  style,
+}: PokemonListItemProps) {
   const styles = useStyles();
-
   return (
     <>
       <ListItem alignItems="flex-start" style={style}>
@@ -33,7 +35,7 @@ export const PokemonListItem = ({ pokemon, style }: PokemonListItemProps) => {
       </ListItem>
     </>
   );
-};
+});
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
