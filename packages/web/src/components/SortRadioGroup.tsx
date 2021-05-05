@@ -2,7 +2,6 @@ import {
   createStyles,
   FormControl,
   FormControlLabel,
-  FormLabel,
   makeStyles,
   Radio,
   RadioGroup,

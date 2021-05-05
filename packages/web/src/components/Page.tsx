@@ -1,15 +1,16 @@
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { useListPokemonQuery } from '../operations';
 import { searchState, sortState, speciesState, typeState } from '../state';
 import { Header } from './Header';
 import logo from './logo.svg';
 import './Page.css';
+import { PokemonCard } from './PokemonCard';
 
 export const Page = () => {
-  const [search] = useRecoilState(searchState);
-  const [type] = useRecoilState(typeState);
-  const [species] = useRecoilState(speciesState);
-  const [sort] = useRecoilState(sortState);
+  const search = useRecoilValue(searchState);
+  const type = useRecoilValue(typeState);
+  const species = useRecoilValue(speciesState);
+  const sort = useRecoilValue(sortState);
 
   const { data } = useListPokemonQuery({
     variables: {
@@ -24,26 +25,12 @@ export const Page = () => {
     },
   });
 
+  const pokemon = data?.listPokemon?.edges?.map((edge) => edge?.node);
+
   return (
     <div className="App">
       <Header />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {JSON.stringify({
-          search,
-          type,
-          species,
-          data,
-        })}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {pokemon?.map((p) => p && <PokemonCard pokemon={p} key={p.id} />)}
     </div>
   );
 };
