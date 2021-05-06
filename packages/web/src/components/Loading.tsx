@@ -10,11 +10,6 @@ import { CSSProperties } from 'react';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      // Adjust for header and divider
-      height: 'calc(100% - 65px)',
-      width: '100%',
-    },
     padding: {
       padding: theme.spacing(2),
     },

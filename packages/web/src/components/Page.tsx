@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
       background: theme.palette.grey[200],
     },
     gridContainer: {
+      overflow: 'auto',
       justifySelf: 'center',
       maxWidth: 1280,
       height: '100%',
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     paper: {
       height: '100%',
+      overflow: 'auto',
     },
   }),
 );

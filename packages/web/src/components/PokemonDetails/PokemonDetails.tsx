@@ -2,14 +2,20 @@ import { CardContent, Divider, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { usePokemonDetails } from '../hooks';
 import { Loading } from '../Loading';
+import { formatPokemonCaption } from '../utils';
+import { PokemonAttributes } from './PokemonAttributes';
 import { SpriteView } from './SpriteView';
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  cardActions: {
+  container: {
+    display: 'grid',
+    height: '100%',
+    width: '100%',
+    alignItems: 'center',
     justifyContent: 'center',
+  },
+  caption: {
+    display: 'flex',
   },
 });
 
@@ -19,19 +25,40 @@ export const PokemonDetails = () => {
   const styles = useStyles();
 
   if (loading) {
-    return <Loading title="Loading Pokémon Details…" />;
+    return (
+      <div className={styles.container}>
+        <Loading title="Loading Pokémon Details…" />
+      </div>
+    );
   }
 
-  return !pokemon ? (
-    <Typography>Select a Pokémon to view details.</Typography>
-  ) : (
+  if (!pokemon) {
+    return (
+      <div className={styles.container}>
+        <Typography variant="overline">
+          Select a Pokémon to view details.
+        </Typography>
+      </div>
+    );
+  }
+
+  return (
     <>
       <SpriteView />
       <Divider />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
+        <Typography variant="h5" component="h1">
           {pokemon.name}
         </Typography>
+        <Typography
+          gutterBottom
+          component="caption"
+          variant="overline"
+          className={styles.caption}
+        >
+          {formatPokemonCaption(pokemon)}
+        </Typography>
+        <PokemonAttributes />
       </CardContent>
     </>
   );

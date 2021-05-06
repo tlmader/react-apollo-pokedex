@@ -79,5 +79,4 @@ type Query {
     first: Int
     after: String
   ): PokemonConnection
-  # countPokemon(filter: PokemonFilterInput): Int
 }

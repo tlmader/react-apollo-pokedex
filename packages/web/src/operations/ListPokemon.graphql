@@ -10,9 +10,13 @@ query ListPokemon(
       node {
         id
         name
+        baseExperience
         order
         sprites {
           frontDefault
+        }
+        types {
+          name
         }
       }
     }

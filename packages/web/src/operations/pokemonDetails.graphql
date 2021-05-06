@@ -2,7 +2,10 @@ query PokemonDetails($id: ID!) {
   getPokemon(id: $id) {
     id
     name
+    baseExperience
+    height
     order
+    weight
     sprites {
       frontDefault
       backDefault
@@ -12,6 +15,22 @@ query PokemonDetails($id: ID!) {
       frontFemale
       frontShiny
       frontShinyFemale
+    }
+    abilities {
+      name
+    }
+    heldItems {
+      name
+    }
+    moves {
+      name
+    }
+    stats {
+      name
+      baseStat
+    }
+    types {
+      name
     }
   }
 }

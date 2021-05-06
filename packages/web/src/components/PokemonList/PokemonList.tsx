@@ -11,9 +11,13 @@ import { PokemonListItem } from './PokemonListItem';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      // Adjust for header and divider
+      // Adjust for toolbar and divider
       height: 'calc(100% - 65px)',
       width: '100%',
+      [theme.breakpoints.down('xs')]: {
+        // Toolbar is smaller in xs
+        height: 'calc(100% - 55px)',
+      },
     },
     message: {
       padding: theme.spacing(2),
@@ -45,7 +49,7 @@ export const PokemonList = () => {
   const Row = ({ index, style }: ListChildComponentProps<PokemonNode>) => {
     const item = items[index];
     return index === items.length ? (
-      <Loading style={style} title="Loading more Pokémon…" />
+      <Loading style={style} title="Loading more Pokémon…" padding={false} />
     ) : (
       <PokemonListItem style={style} key={item?.name} pokemon={item} />
     );

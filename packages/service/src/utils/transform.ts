@@ -26,7 +26,8 @@ export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
     name: formatName(resource.move.name),
   })),
   stats: pokemon.stats.map((resource) => ({
-    name: formatName(resource.stat.name),
+    // Return all uppercase for hp
+    name: resource.stat.name === 'hp' ? 'HP' : formatName(resource.stat.name),
     baseStat: resource.base_stat,
   })),
   sprites: {
