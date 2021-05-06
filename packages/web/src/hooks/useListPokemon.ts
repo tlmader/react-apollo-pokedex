@@ -1,10 +1,7 @@
 import produce from 'immer';
 import { useRecoilValue } from 'recoil';
-import {
-  ListPokemonQueryVariables,
-  useListPokemonQuery,
-} from '../../operations';
-import { searchState, sortState, speciesState, typeState } from '../../state';
+import { ListPokemonQueryVariables, useListPokemonQuery } from '../operations';
+import { searchState, sortState, speciesState, typeState } from '../state';
 
 export const useListPokemon = () => {
   const search = useRecoilValue(searchState);

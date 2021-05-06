@@ -5,7 +5,7 @@ import {
   Paper,
   Theme,
 } from '@material-ui/core';
-import { Header } from './Header';
+import { Header } from './Header/Header';
 import { PokemonDetails } from './PokemonDetails/PokemonDetails';
 import { PokemonList } from './PokemonList';
 

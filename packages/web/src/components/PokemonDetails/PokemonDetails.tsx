@@ -1,6 +1,6 @@
 import { CardContent, Divider, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { usePokemonDetails } from '../hooks';
+import { usePokemonDetails } from '../../hooks';
 import { Loading } from '../Loading';
 import { formatPokemonCaption } from '../utils';
 import { PokemonAttributes } from './PokemonAttributes';
@@ -36,7 +36,7 @@ export const PokemonDetails = () => {
     return (
       <div className={styles.container}>
         <Typography variant="overline">
-          Select a Pokémon to view details.
+          Select a Pokémon to view details
         </Typography>
       </div>
     );

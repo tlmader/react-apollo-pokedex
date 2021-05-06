@@ -4,7 +4,7 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 import InfiniteLoader from 'react-window-infinite-loader';
 import { PokemonNode } from '../../types';
-import { useListPokemon } from '../hooks';
+import { useListPokemon } from '../../hooks';
 import { Loading } from '../Loading';
 import { PokemonListItem } from './PokemonListItem';
 

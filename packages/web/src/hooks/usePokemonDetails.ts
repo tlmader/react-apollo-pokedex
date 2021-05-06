@@ -1,6 +1,6 @@
 import { useRecoilValue } from 'recoil';
-import { usePokemonDetailsQuery } from '../../operations';
-import { selectedPokemonState } from '../../state';
+import { usePokemonDetailsQuery } from '../operations';
+import { selectedPokemonState } from '../state';
 
 export const usePokemonDetails = () => {
   const selectedPokemon = useRecoilValue(selectedPokemonState);

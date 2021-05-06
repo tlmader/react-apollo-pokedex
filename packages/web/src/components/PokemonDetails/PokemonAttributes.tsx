@@ -1,4 +1,4 @@
-import { usePokemonDetails } from '../hooks';
+import { usePokemonDetails } from '../../hooks';
 import { AttributeList } from './AttributeList';
 import { AttributeTable, AttributeTableTuple } from './AttributeTable';
 

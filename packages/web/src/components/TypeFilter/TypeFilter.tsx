@@ -12,6 +12,8 @@ export const TypeFilter = () => {
     setType(value || '');
   };
 
+  console.log({ type });
+
   return (
     <Autocomplete
       value={type}
@@ -20,7 +22,7 @@ export const TypeFilter = () => {
       style={{ flex: 1, maxWidth: 300 }}
       getOptionLabel={(option) => formatName(option)}
       renderInput={(params) => (
-        <HeaderTextField placeholder="Filter by type…" {...params} />
+        <HeaderTextField placeholder="Type" {...params} />
       )}
     />
   );

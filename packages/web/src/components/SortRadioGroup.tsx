@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme: Theme) =>
     typographyRoot: {
       marginRight: theme.spacing(1),
     },
+    radioGroup: {
+      flexWrap: 'nowrap',
+    },
   }),
 );
 
@@ -40,16 +43,12 @@ export const SortRadioGroup = () => {
 
   return (
     <div className={styles.div}>
-      <Typography
-        component="legend"
-        classes={{
-          root: styles.typographyRoot,
-        }}
-      >
-        Sort by:
+      <Typography component="legend" className={styles.typographyRoot} noWrap>
+        Sort by
       </Typography>
       <FormControl component="fieldset">
         <RadioGroup
+          className={styles.radioGroup}
           row
           aria-label="sort"
           name="sort"

@@ -1,7 +1,7 @@
-import { createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
+import { createStyles, makeStyles, Typography } from '@material-ui/core';
 import { Item } from '../../types';
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     grid: {
       display: 'grid',

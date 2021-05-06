@@ -1,19 +1,19 @@
-import { atom } from 'recoil';
+import { atom, selector } from 'recoil';
 import { PokemonNode, PokemonSortInput, Sort } from '../types';
 
-export const searchState = atom<string | undefined>({
+export const searchState = atom<string>({
   key: 'searchState', // unique ID (with respect to other atoms/selectors)
-  default: undefined, // default value (aka initial value)
+  default: '', // default value (aka initial value)
 });
 
-export const typeState = atom<string | undefined>({
+export const typeState = atom<string>({
   key: 'typeState',
-  default: undefined,
+  default: '',
 });
 
-export const speciesState = atom<string | undefined>({
+export const speciesState = atom<string>({
   key: 'speciesState',
-  default: undefined,
+  default: '',
 });
 
 export const sortState = atom<PokemonSortInput>({
@@ -26,4 +26,21 @@ export const sortState = atom<PokemonSortInput>({
 export const selectedPokemonState = atom<Partial<PokemonNode> | undefined>({
   key: 'selectedPokemonState',
   default: undefined,
+});
+
+export const filterCountState = selector({
+  key: 'filterCountState',
+  get: ({ get }) => {
+    const type = get(typeState);
+    const species = get(speciesState);
+
+    let count = 0;
+    if (type) {
+      count++;
+    }
+    if (species) {
+      count++;
+    }
+    return count;
+  },
 });

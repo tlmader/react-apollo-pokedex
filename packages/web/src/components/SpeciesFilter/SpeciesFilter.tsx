@@ -20,7 +20,7 @@ export const SpeciesFilter = () => {
       getOptionLabel={(option) => formatName(option)}
       style={{ flex: 1, maxWidth: 300 }}
       renderInput={(params) => (
-        <HeaderTextField placeholder="Filter by species…" {...params} />
+        <HeaderTextField placeholder="Species" {...params} />
       )}
     />
   );

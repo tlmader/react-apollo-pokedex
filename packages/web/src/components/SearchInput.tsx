@@ -14,7 +14,7 @@ export const SearchInput = () => {
 
   return (
     <HeaderTextField
-      placeholder="Search…"
+      placeholder="Search"
       onChange={handleChange}
       value={search}
       InputProps={{
