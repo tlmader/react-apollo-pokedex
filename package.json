@@ -7,7 +7,8 @@
   "scripts": {
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate": "graphql-codegen --config codegen.yml",
+    "test": "lerna run test --parallel"
   },
   "dependencies": {
     "graphql": "^15.5.0",
@@ -30,8 +31,10 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
+    "lerna": "^4.0.0",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "typescript": "^4.2.4"
-  }
+  },
+  "name": "react-apollo-pokedex"
 }
