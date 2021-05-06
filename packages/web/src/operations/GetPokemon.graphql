@@ -1,4 +1,4 @@
-query PokemonDetails($id: ID!) {
+query GetPokemon($id: ID!) {
   getPokemon(id: $id) {
     id
     name
