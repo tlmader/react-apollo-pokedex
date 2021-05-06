@@ -26,17 +26,11 @@ const useStyles = makeStyles((theme: Theme) =>
     toolbarRoot: {
       gridGap: theme.spacing(2),
     },
-    popover: {
-      width: 300,
-    },
     title: {
       display: 'none',
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
-    },
-    grow: {
-      flexGrow: 1,
     },
   }),
 );

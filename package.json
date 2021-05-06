@@ -5,10 +5,12 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
+    "setup": "yarn && lerna bootstrap",
+    "postinstall": "yarn generate",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install",
     "generate": "graphql-codegen --config codegen.yml",
-    "test": "lerna run test --parallel"
+    "test": "yarn generate; lerna run test --parallel"
   },
   "dependencies": {
     "graphql": "^15.5.0",
