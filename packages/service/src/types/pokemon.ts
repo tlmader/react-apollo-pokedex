@@ -35,6 +35,7 @@ export type Pokemon = {
   moves: {
     move: NamedAPIResource;
   }[];
+  species: NamedAPIResource;
   sprites: {
     back_default: string;
     back_female: string;
@@ -66,7 +67,18 @@ export type Type = {
 export type Species = {
   id: number;
   name: string;
+  growth_rate: NamedAPIResource;
   varieties: {
     pokemon: NamedAPIResource;
+  }[];
+};
+
+export type GrowthRate = {
+  id: number;
+  name: string;
+  formula: string;
+  levels: {
+    level: number;
+    experience: number;
   }[];
 };

@@ -25,11 +25,10 @@ export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
   moves: pokemon.moves.map((resource) => ({
     name: formatName(resource.move.name),
   })),
-  stats: pokemon.stats.map((resource) => ({
-    // Return all uppercase for hp
-    name: resource.stat.name === 'hp' ? 'HP' : formatName(resource.stat.name),
-    baseStat: resource.base_stat,
-  })),
+  // Rest of fields resolved by species resolver
+  species: {
+    name: pokemon.species.name,
+  },
   sprites: {
     frontDefault: pokemon.sprites.front_default,
     backDefault: pokemon.sprites.back_default,
@@ -40,6 +39,11 @@ export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
     frontShinyFemale: pokemon.sprites.front_shiny_female,
     backShinyFemale: pokemon.sprites.back_shiny_female,
   },
+  stats: pokemon.stats.map((resource) => ({
+    // Return all uppercase for hp
+    name: resource.stat.name === 'hp' ? 'HP' : formatName(resource.stat.name),
+    baseStat: resource.base_stat,
+  })),
   types: pokemon.types
     // Sort by slot
     .sort((a, b) => a.slot - b.slot)

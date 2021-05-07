@@ -1,10 +1,12 @@
 import { Context, PokemonNode, QueryResolvers } from '../types';
 import { pokemonToPokemonNode } from '../utils/transform';
 
-export const getPokemon: QueryResolvers['getPokemon'] = (
+type GetPokemonResolver = QueryResolvers<Context>['getPokemon'];
+
+export const getPokemon: GetPokemonResolver = (
   _,
   { id },
-  { dataSources }: Context,
+  { dataSources },
 ): Promise<PokemonNode> => {
   return dataSources.pokeAPI.getPokemon(id).then(pokemonToPokemonNode);
 };

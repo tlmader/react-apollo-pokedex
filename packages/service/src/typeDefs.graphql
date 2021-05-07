@@ -30,6 +30,24 @@ type Sprites {
   frontShinyFemale: String
 }
 
+type GrowthRateExperienceLevel {
+  level: Int
+  experience: Int
+}
+
+type PokemonGrowthRate {
+  id: ID
+  name: String
+  formula: String
+  levels: [GrowthRateExperienceLevel]
+}
+
+type PokemonSpecies {
+  id: ID
+  name: String
+  growthRate: PokemonGrowthRate
+}
+
 type PokemonNode {
   id: ID!
   name: String!
@@ -43,6 +61,7 @@ type PokemonNode {
   sprites: Sprites!
   stats: [Stat]!
   types: [Item]!
+  species: PokemonSpecies
 }
 
 type PokemonEdge {
