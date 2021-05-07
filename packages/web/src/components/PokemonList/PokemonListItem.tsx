@@ -11,7 +11,7 @@ import { CSSProperties, memo } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { selectedPokemonState } from '../../state';
 import { PokemonNode } from '../../types';
-import { formatPokemonCaption } from '../utils';
+import { formatPokemonCaption } from '../../utils';
 
 export type PokemonListItemProps = {
   pokemon?: Partial<PokemonNode>;

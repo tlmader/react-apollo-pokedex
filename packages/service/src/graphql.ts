@@ -7,9 +7,12 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources,
-  playground: {
-    endpoint: '/dev/graphql',
-  },
+  // Run Playground if development
+  ...(process.env.NODE_ENV === 'development' && {
+    playground: {
+      endpoint: '/dev/graphql',
+    },
+  }),
 });
 
 exports.graphqlHandler = server.createHandler({

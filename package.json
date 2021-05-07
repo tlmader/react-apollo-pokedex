@@ -12,6 +12,7 @@
     "prepare": "husky install",
     "generate": "graphql-codegen --config codegen.yml",
     "test": "lerna run test --parallel",
+    "deploy": "lerna run deploy --parallel",
     "e2e": "server-test 'http://localhost:3000' 'lerna run e2e --parallel'"
   },
   "dependencies": {
