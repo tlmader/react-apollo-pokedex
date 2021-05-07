@@ -117,7 +117,8 @@ export const getFilteredSortedPokemonResources = (
   if (filter?.name?.contains) {
     const { contains } = filter.name;
     modifiedResources = modifiedResources.filter((resource) =>
-      resource.name.includes(contains),
+      // Ignore casing
+      resource.name.toUpperCase().includes(contains.toUpperCase()),
     );
   }
   // Set total count to number of resources after filtering
