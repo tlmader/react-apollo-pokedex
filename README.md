@@ -1,10 +1,40 @@
 # React Apollo Pokédex
 
-![react-apollo-pokedex](https://i.imgur.com/C1BrCLR.png)
+![react-apollo-pokedex](https://user-images.githubusercontent.com/2181467/117517427-e0e0b780-af50-11eb-86d5-35c15d8be78b.png)
 
 Pokédex web application showcasing a full-stack web application built with React & Apollo.
 
 All data is requested from [PokeAPI](https://pokeapi.co/docs/v2).
+
+## Setup
+
+1. Run `yarn setup`.
+2. Run `yarn start` to start the web application and service.
+
+If you would like to run each individually (for more readable logs), you can navigate to each package and run `yarn start`.
+
+## Tests
+
+1. Run `yarn test` to run all unit and integration tests.
+2. Run `yarn e2e` to run all end-to-end tests.
+
+## How to use
+
+### View Pokémon details
+
+![react-apollo-pokedex-view-pokemon](https://user-images.githubusercontent.com/2181467/117517374-b55dcd00-af50-11eb-8836-fa36ab262945.gif)
+
+### Filter Pokémon by type
+
+![react-apollo-pokedex-filter-by-type](https://user-images.githubusercontent.com/2181467/117517509-11c0ec80-af51-11eb-94c2-c73c9f38f8cc.gif)
+
+### Filter Pokémon by species
+
+![react-apollo-pokedex-filter-by-species](https://user-images.githubusercontent.com/2181467/117517482-0241a380-af51-11eb-97f9-b35aba2d0e41.gif)
+
+### Sort Pokémon by name
+
+![react-apollo-pokedex-sort-by-name](https://user-images.githubusercontent.com/2181467/117517493-08d01b00-af51-11eb-89b7-6bed3b6391fd.gif)
 
 ## Packages
 
