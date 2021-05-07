@@ -17,6 +17,9 @@ export const SearchInput = () => {
       placeholder="Search"
       onChange={handleChange}
       value={search}
+      inputProps={{
+        'data-testid': 'search-input',
+      }}
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
