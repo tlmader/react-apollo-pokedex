@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "e2e": "cypress run --headless",
     "cypress-open": "cypress open",
-    "deploy": "npx amplify publish -c -y"
+    "deploy": "scripts/deploy.sh"
   },
   "eslintConfig": {
     "extends": [
