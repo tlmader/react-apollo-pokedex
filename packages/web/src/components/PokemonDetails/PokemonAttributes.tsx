@@ -1,6 +1,7 @@
 import { usePokemonDetails } from '../../hooks';
 import { AttributeList } from './AttributeList';
 import { AttributeTable, AttributeTableTuple } from './AttributeTable';
+import { PokemonGrowthChart } from './PokemonGrowthChart';
 
 export const PokemonAttributes = () => {
   const { pokemon } = usePokemonDetails();
@@ -19,6 +20,7 @@ export const PokemonAttributes = () => {
   return pokemon ? (
     <>
       <AttributeTable attributes={attributes} />
+      <PokemonGrowthChart />
       <AttributeTable attributes={stats} />
       <AttributeList items={pokemon.abilities} title="Possible Abilities" />
       <AttributeList items={pokemon.heldItems} title="Held Items" />
