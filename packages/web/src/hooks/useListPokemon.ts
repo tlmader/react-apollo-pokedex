@@ -2,6 +2,7 @@ import produce from 'immer';
 import { useRecoilValue } from 'recoil';
 import { ListPokemonQueryVariables, useListPokemonQuery } from '../operations';
 import { searchState, sortState, speciesState, typeState } from '../state';
+import { useDebounce } from './useDebounce';
 
 export const useListPokemon = () => {
   const search = useRecoilValue(searchState);
@@ -9,17 +10,19 @@ export const useListPokemon = () => {
   const species = useRecoilValue(speciesState);
   const sort = useRecoilValue(sortState);
 
+  const debouncedSearch = useDebounce(search);
+
   // Construct the variables object to only include properties we are using
   const variables: ListPokemonQueryVariables = {
     sort,
     first: 50,
   };
-  if (search || type || species) {
+  if (debouncedSearch || type || species) {
     variables.filter = {};
-    if (search) {
+    if (debouncedSearch) {
       variables.filter = {
         name: {
-          contains: search,
+          contains: debouncedSearch,
         },
       };
     }
