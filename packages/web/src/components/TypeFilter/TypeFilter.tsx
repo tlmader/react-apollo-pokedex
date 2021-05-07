@@ -12,11 +12,9 @@ export const TypeFilter = () => {
     setType(value || '');
   };
 
-  console.log({ type });
-
   return (
     <Autocomplete
-      value={type}
+      value={type || null}
       onChange={handleChange}
       options={TYPE_OPTIONS}
       style={{ flex: 1, maxWidth: 300 }}

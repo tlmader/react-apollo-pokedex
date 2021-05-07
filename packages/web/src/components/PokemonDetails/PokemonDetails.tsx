@@ -47,15 +47,10 @@ export const PokemonDetails = () => {
       <SpriteView />
       <Divider />
       <CardContent>
-        <Typography variant="h5" component="h1">
+        <Typography variant="h5" component="h2" role="heading">
           {pokemon.name}
         </Typography>
-        <Typography
-          gutterBottom
-          component="caption"
-          variant="overline"
-          className={styles.caption}
-        >
+        <Typography gutterBottom variant="overline" className={styles.caption}>
           {formatPokemonCaption(pokemon)}
         </Typography>
         <PokemonAttributes />

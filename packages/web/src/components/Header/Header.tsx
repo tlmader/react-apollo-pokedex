@@ -63,7 +63,12 @@ export const Header = () => {
             root: styles.toolbarRoot,
           }}
         >
-          <Typography className={styles.title} variant="h6" noWrap>
+          <Typography
+            className={styles.title}
+            component="h1"
+            variant="h6"
+            noWrap
+          >
             React Apollo Pokédex
           </Typography>
           <SearchInput />
@@ -76,9 +81,10 @@ export const Header = () => {
           ) : (
             <>
               <IconButton
-                aria-label="show more"
+                aria-label="Filters"
                 aria-controls={filterMenuId}
                 aria-haspopup="true"
+                name="filters"
                 onClick={handleFilterMenuOpen}
                 color="inherit"
               >
@@ -87,9 +93,10 @@ export const Header = () => {
                 </Badge>
               </IconButton>
               <IconButton
-                aria-label="show more"
+                aria-label="Sort"
                 aria-controls={sortMenuId}
                 aria-haspopup="true"
+                name="sort"
                 onClick={handleSortMenuOpen}
                 color="inherit"
               >

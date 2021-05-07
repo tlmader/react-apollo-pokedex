@@ -25,7 +25,7 @@ export const AttributeList = ({ items, title }: AttributeListProps) => {
       </Typography>
       <ul className={styles.grid}>
         {items.map((item) => (
-          <Typography component="li" variant="body2">
+          <Typography component="li" variant="body2" key={item?.name}>
             {item?.name}
           </Typography>
         ))}

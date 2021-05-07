@@ -107,7 +107,7 @@ export const getFilteredSortedPokemonResources = (
   }
   // Handle all filtering
   // Temporary array where we will perform all sorting/filtering on
-  let modifiedResources = resources;
+  let modifiedResources = resources.slice();
   // Perform name filter on resources
   if (filter?.name?.contains) {
     const { contains } = filter.name;
@@ -120,12 +120,12 @@ export const getFilteredSortedPokemonResources = (
 
   // Apply sort to resources
   if (sort) {
-    modifiedResources = sortPokemonResources(sort, resources);
+    modifiedResources = sortPokemonResources(sort, modifiedResources);
   }
 
   const pageSize = first || 20;
   // Update results to contain the page of the filtered resources
-  resources = modifiedResources.slice(offset, offset + pageSize);
+  const pagedResources = modifiedResources.slice(offset, offset + pageSize);
 
   // Update previous and next to reflect filtered list
   const hasPreviousPage = offset > 0;
@@ -133,7 +133,7 @@ export const getFilteredSortedPokemonResources = (
   const hasNextPage = offset + pageSize < modifiedResources.length;
 
   return {
-    resources,
+    resources: pagedResources,
     totalCount,
     hasPreviousPage,
     hasNextPage,

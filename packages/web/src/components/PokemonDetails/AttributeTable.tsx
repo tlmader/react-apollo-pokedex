@@ -26,7 +26,7 @@ export const AttributeTable = ({ attributes }: AttributeTableProps) => {
     <>
       <dl className={styles.grid}>
         {attributes.map(([label, value]) => (
-          <div>
+          <div key={label}>
             <Typography component="dt" variant="caption">
               {label}
             </Typography>

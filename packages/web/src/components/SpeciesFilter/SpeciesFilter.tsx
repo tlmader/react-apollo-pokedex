@@ -14,7 +14,7 @@ export const SpeciesFilter = () => {
 
   return (
     <Autocomplete
-      value={species}
+      value={species || null}
       onChange={handleChange}
       options={SPECIES_OPTIONS}
       getOptionLabel={(option) => formatName(option)}
