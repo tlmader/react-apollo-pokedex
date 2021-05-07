@@ -1,0 +1,29 @@
+query ListPokemon(
+  $filter: PokemonFilterInput
+  $sort: PokemonSortInput
+  $first: Int
+  $after: String
+) {
+  listPokemon(filter: $filter, sort: $sort, first: $first, after: $after) {
+    edges {
+      cursor
+      node {
+        id
+        name
+        baseExperience
+        order
+        sprites {
+          frontDefault
+        }
+        types {
+          name
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    totalCount
+  }
+}

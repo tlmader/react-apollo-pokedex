@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`listPokemon fetches a list of Pokemon 1`] = `
+Object {
+  "data": Object {
+    "listPokemon": Object {
+      "edges": Array [
+        Object {
+          "cursor": "MA",
+          "node": Object {
+            "baseExperience": 64,
+            "id": "1",
+            "name": "Bulbasaur",
+            "order": 1,
+            "sprites": Object {
+              "frontDefault": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            },
+            "types": Array [
+              Object {
+                "name": "Grass",
+              },
+              Object {
+                "name": "Poison",
+              },
+            ],
+          },
+        },
+        Object {
+          "cursor": "MQ",
+          "node": Object {
+            "baseExperience": 142,
+            "id": "2",
+            "name": "Ivysaur",
+            "order": 2,
+            "sprites": Object {
+              "frontDefault": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+            },
+            "types": Array [
+              Object {
+                "name": "Grass",
+              },
+              Object {
+                "name": "Poison",
+              },
+            ],
+          },
+        },
+      ],
+      "pageInfo": Object {
+        "endCursor": "MQ",
+        "hasNextPage": true,
+      },
+      "totalCount": 1118,
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

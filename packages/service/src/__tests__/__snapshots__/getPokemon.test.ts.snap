@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPokemon fetches a Pokemon 1`] = `
+Object {
+  "data": Object {
+    "getPokemon": Object {
+      "abilities": Array [
+        Object {
+          "name": "Overgrow",
+        },
+        Object {
+          "name": "Chlorophyll",
+        },
+      ],
+      "baseExperience": 64,
+      "height": 7,
+      "heldItems": Array [],
+      "id": "1",
+      "moves": Array [
+        Object {
+          "name": "Razor Wind",
+        },
+        Object {
+          "name": "Swords Dance",
+        },
+        Object {
+          "name": "Cut",
+        },
+        Object {
+          "name": "Bind",
+        },
+        Object {
+          "name": "Vine Whip",
+        },
+        Object {
+          "name": "Headbutt",
+        },
+        Object {
+          "name": "Tackle",
+        },
+        Object {
+          "name": "Body Slam",
+        },
+        Object {
+          "name": "Take Down",
+        },
+        Object {
+          "name": "Double Edge",
+        },
+        Object {
+          "name": "Growl",
+        },
+        Object {
+          "name": "Strength",
+        },
+        Object {
+          "name": "Mega Drain",
+        },
+        Object {
+          "name": "Leech Seed",
+        },
+        Object {
+          "name": "Growth",
+        },
+        Object {
+          "name": "Razor Leaf",
+        },
+        Object {
+          "name": "Solar Beam",
+        },
+        Object {
+          "name": "Poison Powder",
+        },
+        Object {
+          "name": "Sleep Powder",
+        },
+        Object {
+          "name": "Petal Dance",
+        },
+        Object {
+          "name": "String Shot",
+        },
+        Object {
+          "name": "Toxic",
+        },
+        Object {
+          "name": "Rage",
+        },
+        Object {
+          "name": "Mimic",
+        },
+        Object {
+          "name": "Double Team",
+        },
+        Object {
+          "name": "Defense Curl",
+        },
+        Object {
+          "name": "Light Screen",
+        },
+        Object {
+          "name": "Reflect",
+        },
+        Object {
+          "name": "Bide",
+        },
+        Object {
+          "name": "Sludge",
+        },
+        Object {
+          "name": "Skull Bash",
+        },
+        Object {
+          "name": "Amnesia",
+        },
+        Object {
+          "name": "Flash",
+        },
+        Object {
+          "name": "Rest",
+        },
+        Object {
+          "name": "Substitute",
+        },
+        Object {
+          "name": "Snore",
+        },
+        Object {
+          "name": "Curse",
+        },
+        Object {
+          "name": "Protect",
+        },
+        Object {
+          "name": "Sludge Bomb",
+        },
+        Object {
+          "name": "Mud Slap",
+        },
+        Object {
+          "name": "Giga Drain",
+        },
+        Object {
+          "name": "Endure",
+        },
+        Object {
+          "name": "Charm",
+        },
+        Object {
+          "name": "Swagger",
+        },
+        Object {
+          "name": "Fury Cutter",
+        },
+        Object {
+          "name": "Attract",
+        },
+        Object {
+          "name": "Sleep Talk",
+        },
+        Object {
+          "name": "Return",
+        },
+        Object {
+          "name": "Frustration",
+        },
+        Object {
+          "name": "Safeguard",
+        },
+        Object {
+          "name": "Sweet Scent",
+        },
+        Object {
+          "name": "Synthesis",
+        },
+        Object {
+          "name": "Hidden Power",
+        },
+        Object {
+          "name": "Sunny Day",
+        },
+        Object {
+          "name": "Rock Smash",
+        },
+        Object {
+          "name": "Facade",
+        },
+        Object {
+          "name": "Nature Power",
+        },
+        Object {
+          "name": "Ingrain",
+        },
+        Object {
+          "name": "Knock Off",
+        },
+        Object {
+          "name": "Secret Power",
+        },
+        Object {
+          "name": "Grass Whistle",
+        },
+        Object {
+          "name": "Bullet Seed",
+        },
+        Object {
+          "name": "Magical Leaf",
+        },
+        Object {
+          "name": "Natural Gift",
+        },
+        Object {
+          "name": "Worry Seed",
+        },
+        Object {
+          "name": "Seed Bomb",
+        },
+        Object {
+          "name": "Energy Ball",
+        },
+        Object {
+          "name": "Leaf Storm",
+        },
+        Object {
+          "name": "Power Whip",
+        },
+        Object {
+          "name": "Captivate",
+        },
+        Object {
+          "name": "Grass Knot",
+        },
+        Object {
+          "name": "Venoshock",
+        },
+        Object {
+          "name": "Round",
+        },
+        Object {
+          "name": "Echoed Voice",
+        },
+        Object {
+          "name": "Grass Pledge",
+        },
+        Object {
+          "name": "Work Up",
+        },
+        Object {
+          "name": "Grassy Terrain",
+        },
+        Object {
+          "name": "Confide",
+        },
+      ],
+      "name": "Bulbasaur",
+      "order": 1,
+      "sprites": Object {
+        "backDefault": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+        "backFemale": null,
+        "backShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
+        "backShinyFemale": null,
+        "frontDefault": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        "frontFemale": null,
+        "frontShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
+        "frontShinyFemale": null,
+      },
+      "stats": Array [
+        Object {
+          "baseStat": 45,
+          "name": "HP",
+        },
+        Object {
+          "baseStat": 49,
+          "name": "Attack",
+        },
+        Object {
+          "baseStat": 49,
+          "name": "Defense",
+        },
+        Object {
+          "baseStat": 65,
+          "name": "Special Attack",
+        },
+        Object {
+          "baseStat": 65,
+          "name": "Special Defense",
+        },
+        Object {
+          "baseStat": 45,
+          "name": "Speed",
+        },
+      ],
+      "types": Array [
+        Object {
+          "name": "Grass",
+        },
+        Object {
+          "name": "Poison",
+        },
+      ],
+      "weight": 69,
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
