@@ -5,7 +5,7 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
-    "setup": "yarn && lerna bootstrap",
+    "setup": "npx lerna bootstrap",
     "postinstall": "yarn generate",
     "start": "lerna run start --parallel",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx",
