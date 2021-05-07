@@ -70,7 +70,7 @@ export const PokemonList = () => {
   }
 
   return (
-    <div className={styles.root} data-testId="pokemon-list">
+    <div className={styles.root} data-testid="pokemon-list">
       <Toolbar>
         <Typography variant="overline">{totalCount} Pokémon found!</Typography>
       </Toolbar>
