@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress-open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
   "devDependencies": {
     "@types/react-virtualized-auto-sizer": "^1.0.0",
     "@types/react-window": "^1.8.3",
-    "@types/react-window-infinite-loader": "^1.0.3"
+    "@types/react-window-infinite-loader": "^1.0.3",
+    "cypress": "^7.2.0"
   }
 }

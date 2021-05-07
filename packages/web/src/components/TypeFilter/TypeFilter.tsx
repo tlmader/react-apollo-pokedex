@@ -20,7 +20,11 @@ export const TypeFilter = () => {
       style={{ flex: 1, maxWidth: 300 }}
       getOptionLabel={(option) => formatName(option)}
       renderInput={(params) => (
-        <HeaderTextField placeholder="Type" {...params} />
+        <HeaderTextField
+          placeholder="Type"
+          {...params}
+          inputProps={{ ...params.inputProps, 'data-testid': 'type-input' }}
+        />
       )}
     />
   );

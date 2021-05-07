@@ -55,8 +55,22 @@ export const SortRadioGroup = () => {
           value={sortInputToValue(sort)}
           onChange={handleChange}
         >
-          <FormControlLabel value="order" control={<Radio />} label="Pokédex" />
-          <FormControlLabel value="name" control={<Radio />} label="Name" />
+          <FormControlLabel
+            value="order"
+            control={
+              // @ts-ignore - https://github.com/microsoft/TypeScript/issues/28960
+              <Radio inputProps={{ 'data-testid': 'order-radio-button' }} />
+            }
+            label="Pokédex"
+          />
+          <FormControlLabel
+            value="name"
+            control={
+              // @ts-ignore - https://github.com/microsoft/TypeScript/issues/28960
+              <Radio inputProps={{ 'data-testid': 'name-radio-button' }} />
+            }
+            label="Name"
+          />
         </RadioGroup>
       </FormControl>
     </div>
