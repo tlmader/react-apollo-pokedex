@@ -16,8 +16,28 @@ functions:
       - http:
           path: graphql
           method: post
-          cors: true
+          cors:
+            origins:
+              - https://d1ruwbi83dcwv2.cloudfront.net
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
       - http:
           path: graphql
           method: get
-          cors: true
+          cors:
+            origins:
+              - https://d1ruwbi83dcwv2.cloudfront.net
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false

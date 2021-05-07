@@ -1,8 +1,8 @@
 import { CardContent, Divider, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { usePokemonDetails } from '../../hooks';
+import { formatPokemonCaption } from '../../utils';
 import { Loading } from '../Loading';
-import { formatPokemonCaption } from '../utils';
 import { PokemonAttributes } from './PokemonAttributes';
 import { SpriteView } from './SpriteView';
 
