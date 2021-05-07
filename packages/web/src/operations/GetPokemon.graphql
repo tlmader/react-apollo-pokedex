@@ -25,6 +25,16 @@ query GetPokemon($id: ID!) {
     moves {
       name
     }
+    species {
+      id
+      growthRate {
+        id
+        levels {
+          experience
+          level
+        }
+      }
+    }
     stats {
       name
       baseStat
