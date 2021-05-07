@@ -10,7 +10,8 @@
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install",
     "generate": "graphql-codegen --config codegen.yml",
-    "test": "lerna run test --parallel"
+    "test": "lerna run test --parallel",
+    "e2e": "lerna run e2e --parallel"
   },
   "dependencies": {
     "graphql": "^15.5.0",
