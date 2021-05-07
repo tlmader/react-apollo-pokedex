@@ -6,6 +6,7 @@ import {
   PokemonEdge,
   PokemonFilterInput,
   PokemonSortInput,
+  Sort,
 } from '../../types';
 import { sortPokemonResources } from '../../utils/sort';
 import {
@@ -60,7 +61,9 @@ export const getPokemonResources = async (
     } else {
       resources = resultResources[0];
     }
-  } else if (sort || filter?.name) {
+
+    // Disregard sort order asc, which is the default
+  } else if ((sort && sort.order !== Sort.Asc) || filter?.name) {
     // Sorting or filtering by name requires us to get the entire resource list to filter or sort on
     const { results } = await dataSources.pokeAPI.getPokemonResourceList(9999);
     resources = results;
@@ -71,6 +74,7 @@ export const getPokemonResources = async (
       previous,
       next,
     } = await dataSources.pokeAPI.getPokemonResourceList(first, offset);
+    console.log({ next });
 
     resources = results;
     // If we are using the paged resource list, set PageInfo flags and totalCount here
@@ -102,7 +106,8 @@ export const getFilteredSortedPokemonResources = (
   hasNextPage: boolean;
   totalCount: number;
 } | null => {
-  if (!sort && !filter) {
+  // Disregard sort order asc, which is the default
+  if ((!sort || sort.order === Sort.Asc) && !filter) {
     return null;
   }
   // Handle all filtering

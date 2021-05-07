@@ -4,6 +4,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "sls offline",
+    "test": "jest",
     "deploy": "sls deploy",
     "deploy-dev": "NODE_ENV=development yarn deploy"
   },
@@ -13,8 +14,12 @@
     "base64-url": "^2.3.3"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.13.0",
     "@graphql-codegen/typescript-resolvers": "^1.19.1",
     "@types/base64-url": "^2.2.0",
+    "apollo-server-testing": "^2.24.0",
+    "jest": "26.6.0",
+    "jest-transform-graphql": "^2.1.0",
     "serverless-offline": "^7.0.0",
     "serverless-plugin-monorepo": "^0.10.0",
     "serverless-plugin-typescript": "^1.1.9",
