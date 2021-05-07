@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sls offline",
+    "start": "npx serverless offline",
     "test": "jest",
-    "deploy": "sls deploy",
+    "deploy": "npx serverless deploy",
     "deploy-dev": "NODE_ENV=development yarn deploy"
   },
   "dependencies": {
