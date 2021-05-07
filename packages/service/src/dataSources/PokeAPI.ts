@@ -1,5 +1,11 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { NamedAPIResourceList, Pokemon, Species, Type } from '../types';
+import {
+  GrowthRate,
+  NamedAPIResourceList,
+  Pokemon,
+  Species,
+  Type,
+} from '../types';
 
 export class PokeAPI extends RESTDataSource {
   constructor() {
@@ -13,9 +19,9 @@ export class PokeAPI extends RESTDataSource {
    * Hyphenated name (e.g., ho-oh) can also be used instead of id
    * https://pokeapi.co/docs/v2#pokemon
    */
-  async getPokemon(id: string): Promise<Pokemon> {
+  async getPokemon(idOrName: string): Promise<Pokemon> {
     // Send a GET request to the specified endpoint
-    return this.get(`pokemon/${id}`);
+    return this.get(`pokemon/${idOrName}`);
   }
 
   /**
@@ -39,14 +45,21 @@ export class PokeAPI extends RESTDataSource {
   /**
    * https://pokeapi.co/docs/v2#pokemon-species
    */
-  async getSpecies(species: string): Promise<Species> {
-    return this.get(`pokemon-species/${species}`);
+  async getSpecies(idOrName: string): Promise<Species> {
+    return this.get(`pokemon-species/${idOrName}`);
   }
 
   /**
    * https://pokeapi.co/docs/v2#types
    */
-  async getType(type: string): Promise<Type> {
-    return this.get(`type/${type}`);
+  async getType(idOrName: string): Promise<Type> {
+    return this.get(`type/${idOrName}`);
+  }
+
+  /**
+   * https://pokeapi.co/docs/v2#types
+   */
+  async getGrowthRate(idOrName: string): Promise<GrowthRate> {
+    return this.get(`growth-rate/${idOrName}`);
   }
 }

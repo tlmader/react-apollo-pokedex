@@ -12,10 +12,12 @@ import {
   getPokemonResources,
 } from './utils';
 
-export const listPokemon: QueryResolvers['listPokemon'] = async (
+type ListPokemonResolver = QueryResolvers<Context>['listPokemon'];
+
+export const listPokemon: ListPokemonResolver = async (
   _,
   { after, first, filter, sort },
-  { dataSources }: Context,
+  { dataSources },
 ): Promise<PokemonConnection> => {
   if (first && first > 50) {
     throw new Error('Please use a first value that is 50 or lower.');
