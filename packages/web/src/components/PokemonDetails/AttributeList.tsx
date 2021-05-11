@@ -11,12 +11,16 @@ const useStyles = makeStyles(() =>
 );
 
 export type AttributeListProps = {
-  items: (Item | null)[];
-  title: string;
+  items?: (Item | null)[] | null;
+  title?: string;
 };
 
 export const AttributeList = ({ items, title }: AttributeListProps) => {
   const styles = useStyles();
+
+  if (!items) {
+    return null;
+  }
 
   return (
     <>

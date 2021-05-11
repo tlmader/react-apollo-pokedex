@@ -49,24 +49,24 @@ type PokemonSpecies {
 }
 
 type PokemonNode {
-  id: ID!
+  id: ID
   name: String!
-  baseExperience: Int!
-  height: Int!
-  order: Int!
-  weight: Int!
-  abilities: [Item]!
-  heldItems: [Item]!
-  moves: [Item]!
-  sprites: Sprites!
-  stats: [Stat]!
-  types: [Item]!
+  baseExperience: Int
+  height: Int
+  order: Int
+  weight: Int
+  abilities: [Item]
+  heldItems: [Item]
+  moves: [Item]
+  sprites: Sprites
+  stats: [Stat]
+  types: [Item]
   species: PokemonSpecies
 }
 
 type PokemonEdge {
   cursor: String!
-  node: PokemonNode!
+  node: PokemonNode
 }
 
 type PokemonConnection {

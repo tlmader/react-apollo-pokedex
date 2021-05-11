@@ -5,7 +5,7 @@ import {
   QueryResolvers,
 } from '../../types';
 import { fromCursor } from '../../utils/cursor';
-import { pokemonToEdge } from '../../utils/transform';
+import { resourceToEdge } from '../../utils/transform';
 import {
   createPokemonConnection,
   getFilteredSortedPokemonResources,
@@ -44,13 +44,7 @@ export const listPokemon: ListPokemonResolver = async (
   const { resources, hasPreviousPage, hasNextPage, totalCount } =
     filteredSortedResult || result;
 
-  // Retrieve the complete pokemon data for each resource and convert to edges
-  const pokemons = await Promise.all(
-    resources.map(async (resource) =>
-      dataSources.pokeAPI.getPokemon(resource.name),
-    ),
-  );
-  const edges: PokemonEdge[] = pokemons.map(pokemonToEdge(offset));
+  const edges: PokemonEdge[] = resources.map(resourceToEdge(offset));
 
   return createPokemonConnection(
     edges,
