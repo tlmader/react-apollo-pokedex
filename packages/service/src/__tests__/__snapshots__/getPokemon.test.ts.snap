@@ -15,7 +15,7 @@ Object {
       "baseExperience": 64,
       "height": 7,
       "heldItems": Array [],
-      "id": "1",
+      "id": "bulbasaur",
       "moves": Array [
         Object {
           "name": "Razor Wind",

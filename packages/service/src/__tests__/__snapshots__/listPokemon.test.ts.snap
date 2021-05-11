@@ -9,7 +9,7 @@ Object {
           "cursor": "MA",
           "node": Object {
             "baseExperience": 64,
-            "id": "1",
+            "id": "bulbasaur",
             "name": "Bulbasaur",
             "order": 1,
             "sprites": Object {
@@ -29,7 +29,7 @@ Object {
           "cursor": "MQ",
           "node": Object {
             "baseExperience": 142,
-            "id": "2",
+            "id": "ivysaur",
             "name": "Ivysaur",
             "order": 2,
             "sprites": Object {
