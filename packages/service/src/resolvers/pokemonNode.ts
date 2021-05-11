@@ -19,9 +19,9 @@ export const pokemonNode: PokemonGrowthRateResolver = async (
   _,
   { dataSources }: Context,
 ): Promise<PokemonNode | null> => {
-  const name = parent?.node?.name;
-  if (!name) {
+  const id = parent?.node?.id;
+  if (!id) {
     return null;
   }
-  return dataSources.pokeAPI.getPokemon(name).then(pokemonToPokemonNode);
+  return dataSources.pokeAPI.getPokemon(id).then(pokemonToPokemonNode);
 };

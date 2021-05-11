@@ -31,32 +31,32 @@ export const PokemonListItem = memo(function ({
     return null;
   }
 
-  const handleClick = () => setSelectedPokemon(pokemon);
+  const handleClick = () => {
+    setSelectedPokemon(pokemon);
+  };
 
   return (
-    <>
-      <ListItem
-        alignItems="flex-start"
-        style={style}
-        button
-        onClick={handleClick}
-      >
-        <ListItemAvatar>
-          <Avatar
-            className={styles.avatar}
-            alt={pokemon?.name}
-            src={pokemon?.sprites?.frontDefault || ''}
-          />
-        </ListItemAvatar>
-        <ListItemText
-          primary={pokemon?.name}
-          secondary={formatPokemonCaption(pokemon)}
-          secondaryTypographyProps={{
-            variant: 'overline',
-          }}
+    <ListItem
+      alignItems="flex-start"
+      style={style}
+      button
+      onClick={handleClick}
+    >
+      <ListItemAvatar>
+        <Avatar
+          className={styles.avatar}
+          alt={pokemon?.name || ''}
+          src={pokemon?.sprites?.frontDefault || ''}
         />
-      </ListItem>
-    </>
+      </ListItemAvatar>
+      <ListItemText
+        primary={pokemon?.name}
+        secondary={formatPokemonCaption(pokemon)}
+        secondaryTypographyProps={{
+          variant: 'overline',
+        }}
+      />
+    </ListItem>
   );
 });
 

@@ -24,7 +24,8 @@ export const mockedListPokemonSpeciesFilterQuery: MockedResponse<ListPokemonQuer
             cursor: 'MA',
             node: {
               __typename: 'PokemonNode',
-              id: '1',
+              id: 'bulbasaur',
+              pokedexNumber: 1,
               name: 'Bulbasaur',
               baseExperience: 64,
               order: 1,
@@ -36,10 +37,12 @@ export const mockedListPokemonSpeciesFilterQuery: MockedResponse<ListPokemonQuer
               types: [
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],

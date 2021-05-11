@@ -9,6 +9,7 @@ query ListPokemon(
       cursor
       node {
         id
+        pokedexNumber
         name
         baseExperience
         order
@@ -16,6 +17,7 @@ query ListPokemon(
           frontDefault
         }
         types {
+          id
           name
         }
       }

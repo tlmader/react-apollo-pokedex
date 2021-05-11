@@ -51,7 +51,7 @@ export const PokemonList = () => {
     return index === items.length ? (
       <Loading style={style} title="Loading more Pokémon…" padding={false} />
     ) : (
-      <PokemonListItem style={style} key={item?.name} pokemon={item} />
+      <PokemonListItem style={style} key={item?.id} pokemon={item} />
     );
   };
 

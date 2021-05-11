@@ -10,24 +10,30 @@ import { toCursor } from './cursor';
 import { formatName } from './string';
 
 export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
-  id: pokemon.id.toString(),
+  // Use name as id, since this is the identifier included in NamedAPIResource
+  id: pokemon.name,
+  // Use id as pokedexNumber instead
+  pokedexNumber: pokemon.id,
   name: formatName(pokemon.name),
   order: pokemon.order,
   height: pokemon.height,
   baseExperience: pokemon.base_experience,
   weight: pokemon.weight,
   abilities: pokemon.abilities.map((resource) => ({
+    id: resource.ability.name,
     name: formatName(resource.ability.name),
   })),
   heldItems: pokemon.held_items.map((resource) => ({
+    id: resource.item.name,
     name: formatName(resource.item.name),
   })),
   moves: pokemon.moves.map((resource) => ({
+    id: resource.move.name,
     name: formatName(resource.move.name),
   })),
   // Rest of fields resolved by species resolver
   species: {
-    name: pokemon.species.name,
+    id: pokemon.species.name,
   },
   sprites: {
     frontDefault: pokemon.sprites.front_default,
@@ -40,6 +46,7 @@ export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
     backShinyFemale: pokemon.sprites.back_shiny_female,
   },
   stats: pokemon.stats.map((resource) => ({
+    id: resource.stat.name,
     // Return all uppercase for hp
     name: resource.stat.name === 'hp' ? 'HP' : formatName(resource.stat.name),
     baseStat: resource.base_stat,
@@ -48,6 +55,7 @@ export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
     // Sort by slot
     .sort((a, b) => a.slot - b.slot)
     .map((resource) => ({
+      id: resource.type.name,
       name: formatName(resource.type.name),
     })),
 });
@@ -59,7 +67,7 @@ export const resourceToEdge = (offset: number) => (
   // Use index to create the cursor so that it works with filtered or sorted lists
   cursor: toCursor(offset + index),
   node: {
-    name: resource.name,
+    id: resource.name,
   },
 });
 

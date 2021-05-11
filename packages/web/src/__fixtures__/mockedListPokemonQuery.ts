@@ -21,7 +21,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MA',
             node: {
               __typename: 'PokemonNode',
-              id: '1',
+              id: 'bulbasaur',
+              pokedexNumber: 1,
               name: 'Bulbasaur',
               baseExperience: 64,
               order: 1,
@@ -33,10 +34,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -47,7 +50,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MQ',
             node: {
               __typename: 'PokemonNode',
-              id: '2',
+              id: 'ivysaur',
+              pokedexNumber: 2,
               name: 'Ivysaur',
               baseExperience: 142,
               order: 2,
@@ -59,10 +63,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -73,7 +79,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mg',
             node: {
               __typename: 'PokemonNode',
-              id: '3',
+              id: 'venusaur',
+              pokedexNumber: 3,
               name: 'Venusaur',
               baseExperience: 236,
               order: 3,
@@ -85,10 +92,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -99,7 +108,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mw',
             node: {
               __typename: 'PokemonNode',
-              id: '4',
+              id: 'charmander',
+              pokedexNumber: 4,
               name: 'Charmander',
               baseExperience: 62,
               order: 5,
@@ -111,6 +121,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'fire',
                   name: 'Fire',
                 },
               ],
@@ -121,7 +132,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NA',
             node: {
               __typename: 'PokemonNode',
-              id: '5',
+              id: 'charmeleon',
+              pokedexNumber: 5,
               name: 'Charmeleon',
               baseExperience: 142,
               order: 6,
@@ -133,6 +145,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'fire',
                   name: 'Fire',
                 },
               ],
@@ -143,7 +156,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NQ',
             node: {
               __typename: 'PokemonNode',
-              id: '6',
+              id: 'charizard',
+              pokedexNumber: 6,
               name: 'Charizard',
               baseExperience: 240,
               order: 7,
@@ -155,10 +169,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'fire',
                   name: 'Fire',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -169,7 +185,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Ng',
             node: {
               __typename: 'PokemonNode',
-              id: '7',
+              id: 'squirtle',
+              pokedexNumber: 7,
               name: 'Squirtle',
               baseExperience: 63,
               order: 10,
@@ -181,6 +198,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'water',
                   name: 'Water',
                 },
               ],
@@ -191,7 +209,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Nw',
             node: {
               __typename: 'PokemonNode',
-              id: '8',
+              id: 'wartortle',
+              pokedexNumber: 8,
               name: 'Wartortle',
               baseExperience: 142,
               order: 11,
@@ -203,6 +222,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'water',
                   name: 'Water',
                 },
               ],
@@ -213,7 +233,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'OA',
             node: {
               __typename: 'PokemonNode',
-              id: '9',
+              id: 'blastoise',
+              pokedexNumber: 9,
               name: 'Blastoise',
               baseExperience: 239,
               order: 12,
@@ -225,6 +246,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'water',
                   name: 'Water',
                 },
               ],
@@ -235,7 +257,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'OQ',
             node: {
               __typename: 'PokemonNode',
-              id: '10',
+              id: 'caterpie',
+              pokedexNumber: 10,
               name: 'Caterpie',
               baseExperience: 39,
               order: 14,
@@ -247,6 +270,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
               ],
@@ -257,7 +281,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTA',
             node: {
               __typename: 'PokemonNode',
-              id: '11',
+              id: 'metapod',
+              pokedexNumber: 11,
               name: 'Metapod',
               baseExperience: 72,
               order: 15,
@@ -269,6 +294,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
               ],
@@ -279,7 +305,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTE',
             node: {
               __typename: 'PokemonNode',
-              id: '12',
+              id: 'butterfree',
+              pokedexNumber: 12,
               name: 'Butterfree',
               baseExperience: 178,
               order: 16,
@@ -291,10 +318,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -305,7 +334,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTI',
             node: {
               __typename: 'PokemonNode',
-              id: '13',
+              id: 'weedle',
+              pokedexNumber: 13,
               name: 'Weedle',
               baseExperience: 39,
               order: 17,
@@ -317,10 +347,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -331,7 +363,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTM',
             node: {
               __typename: 'PokemonNode',
-              id: '14',
+              id: 'kakuna',
+              pokedexNumber: 14,
               name: 'Kakuna',
               baseExperience: 72,
               order: 18,
@@ -343,10 +376,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -357,7 +392,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTQ',
             node: {
               __typename: 'PokemonNode',
-              id: '15',
+              id: 'beedrill',
+              pokedexNumber: 15,
               name: 'Beedrill',
               baseExperience: 178,
               order: 19,
@@ -369,10 +405,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -383,7 +421,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTU',
             node: {
               __typename: 'PokemonNode',
-              id: '16',
+              id: 'pidgey',
+              pokedexNumber: 16,
               name: 'Pidgey',
               baseExperience: 50,
               order: 21,
@@ -395,10 +434,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -409,7 +450,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTY',
             node: {
               __typename: 'PokemonNode',
-              id: '17',
+              id: 'pidgeotto',
+              pokedexNumber: 17,
               name: 'Pidgeotto',
               baseExperience: 122,
               order: 22,
@@ -421,10 +463,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -435,7 +479,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTc',
             node: {
               __typename: 'PokemonNode',
-              id: '18',
+              id: 'pidgeot',
+              pokedexNumber: 18,
               name: 'Pidgeot',
               baseExperience: 216,
               order: 23,
@@ -447,10 +492,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -461,7 +508,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTg',
             node: {
               __typename: 'PokemonNode',
-              id: '19',
+              id: 'rattata',
+              pokedexNumber: 19,
               name: 'Rattata',
               baseExperience: 51,
               order: 25,
@@ -473,6 +521,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -483,7 +532,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MTk',
             node: {
               __typename: 'PokemonNode',
-              id: '20',
+              id: 'raticate',
+              pokedexNumber: 20,
               name: 'Raticate',
               baseExperience: 145,
               order: 27,
@@ -495,6 +545,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -505,7 +556,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MjA',
             node: {
               __typename: 'PokemonNode',
-              id: '21',
+              id: 'spearow',
+              pokedexNumber: 21,
               name: 'Spearow',
               baseExperience: 52,
               order: 30,
@@ -517,10 +569,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -531,7 +585,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MjE',
             node: {
               __typename: 'PokemonNode',
-              id: '22',
+              id: 'fearow',
+              pokedexNumber: 22,
               name: 'Fearow',
               baseExperience: 155,
               order: 31,
@@ -543,10 +598,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -557,7 +614,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MjI',
             node: {
               __typename: 'PokemonNode',
-              id: '23',
+              id: 'ekans',
+              pokedexNumber: 23,
               name: 'Ekans',
               baseExperience: 58,
               order: 32,
@@ -569,6 +627,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -579,7 +638,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MjM',
             node: {
               __typename: 'PokemonNode',
-              id: '24',
+              id: 'arbok',
+              pokedexNumber: 24,
               name: 'Arbok',
               baseExperience: 157,
               order: 33,
@@ -591,6 +651,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -601,7 +662,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MjQ',
             node: {
               __typename: 'PokemonNode',
-              id: '25',
+              id: 'pikachu',
+              pokedexNumber: 25,
               name: 'Pikachu',
               baseExperience: 112,
               order: 35,
@@ -613,6 +675,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -623,7 +686,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MjU',
             node: {
               __typename: 'PokemonNode',
-              id: '26',
+              id: 'raichu',
+              pokedexNumber: 26,
               name: 'Raichu',
               baseExperience: 218,
               order: 49,
@@ -635,6 +699,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -645,7 +710,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MjY',
             node: {
               __typename: 'PokemonNode',
-              id: '27',
+              id: 'sandshrew',
+              pokedexNumber: 27,
               name: 'Sandshrew',
               baseExperience: 60,
               order: 51,
@@ -657,6 +723,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'ground',
                   name: 'Ground',
                 },
               ],
@@ -667,7 +734,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mjc',
             node: {
               __typename: 'PokemonNode',
-              id: '28',
+              id: 'sandslash',
+              pokedexNumber: 28,
               name: 'Sandslash',
               baseExperience: 158,
               order: 53,
@@ -679,6 +747,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'ground',
                   name: 'Ground',
                 },
               ],
@@ -689,7 +758,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mjg',
             node: {
               __typename: 'PokemonNode',
-              id: '29',
+              id: 'nidoran-f',
+              pokedexNumber: 29,
               name: 'Nidoran F',
               baseExperience: 55,
               order: 55,
@@ -701,6 +771,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -711,7 +782,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mjk',
             node: {
               __typename: 'PokemonNode',
-              id: '30',
+              id: 'nidorina',
+              pokedexNumber: 30,
               name: 'Nidorina',
               baseExperience: 128,
               order: 56,
@@ -723,6 +795,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -733,7 +806,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MzA',
             node: {
               __typename: 'PokemonNode',
-              id: '31',
+              id: 'nidoqueen',
+              pokedexNumber: 31,
               name: 'Nidoqueen',
               baseExperience: 227,
               order: 57,
@@ -745,10 +819,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
                 {
                   __typename: 'Item',
+                  id: 'ground',
                   name: 'Ground',
                 },
               ],
@@ -759,7 +835,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MzE',
             node: {
               __typename: 'PokemonNode',
-              id: '32',
+              id: 'nidoran-m',
+              pokedexNumber: 32,
               name: 'Nidoran M',
               baseExperience: 55,
               order: 58,
@@ -771,6 +848,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -781,7 +859,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MzI',
             node: {
               __typename: 'PokemonNode',
-              id: '33',
+              id: 'nidorino',
+              pokedexNumber: 33,
               name: 'Nidorino',
               baseExperience: 128,
               order: 59,
@@ -793,6 +872,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -803,7 +883,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MzM',
             node: {
               __typename: 'PokemonNode',
-              id: '34',
+              id: 'nidoking',
+              pokedexNumber: 34,
               name: 'Nidoking',
               baseExperience: 227,
               order: 60,
@@ -815,10 +896,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
                 {
                   __typename: 'Item',
+                  id: 'ground',
                   name: 'Ground',
                 },
               ],
@@ -829,7 +912,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MzQ',
             node: {
               __typename: 'PokemonNode',
-              id: '35',
+              id: 'clefairy',
+              pokedexNumber: 35,
               name: 'Clefairy',
               baseExperience: 113,
               order: 62,
@@ -841,6 +925,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -851,7 +936,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MzU',
             node: {
               __typename: 'PokemonNode',
-              id: '36',
+              id: 'clefable',
+              pokedexNumber: 36,
               name: 'Clefable',
               baseExperience: 217,
               order: 63,
@@ -863,6 +949,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -873,7 +960,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'MzY',
             node: {
               __typename: 'PokemonNode',
-              id: '37',
+              id: 'vulpix',
+              pokedexNumber: 37,
               name: 'Vulpix',
               baseExperience: 60,
               order: 64,
@@ -885,6 +973,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'fire',
                   name: 'Fire',
                 },
               ],
@@ -895,7 +984,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mzc',
             node: {
               __typename: 'PokemonNode',
-              id: '38',
+              id: 'ninetales',
+              pokedexNumber: 38,
               name: 'Ninetales',
               baseExperience: 177,
               order: 66,
@@ -907,6 +997,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'fire',
                   name: 'Fire',
                 },
               ],
@@ -917,7 +1008,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mzg',
             node: {
               __typename: 'PokemonNode',
-              id: '39',
+              id: 'jigglypuff',
+              pokedexNumber: 39,
               name: 'Jigglypuff',
               baseExperience: 95,
               order: 69,
@@ -929,10 +1021,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -943,7 +1037,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'Mzk',
             node: {
               __typename: 'PokemonNode',
-              id: '40',
+              id: 'wigglytuff',
+              pokedexNumber: 40,
               name: 'Wigglytuff',
               baseExperience: 196,
               order: 70,
@@ -955,10 +1050,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -969,7 +1066,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDA',
             node: {
               __typename: 'PokemonNode',
-              id: '41',
+              id: 'zubat',
+              pokedexNumber: 41,
               name: 'Zubat',
               baseExperience: 49,
               order: 71,
@@ -981,10 +1079,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -995,7 +1095,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDE',
             node: {
               __typename: 'PokemonNode',
-              id: '42',
+              id: 'golbat',
+              pokedexNumber: 42,
               name: 'Golbat',
               baseExperience: 159,
               order: 72,
@@ -1007,10 +1108,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -1021,7 +1124,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDI',
             node: {
               __typename: 'PokemonNode',
-              id: '43',
+              id: 'oddish',
+              pokedexNumber: 43,
               name: 'Oddish',
               baseExperience: 64,
               order: 74,
@@ -1033,10 +1137,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -1047,7 +1153,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDM',
             node: {
               __typename: 'PokemonNode',
-              id: '44',
+              id: 'gloom',
+              pokedexNumber: 44,
               name: 'Gloom',
               baseExperience: 138,
               order: 75,
@@ -1059,10 +1166,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -1073,7 +1182,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDQ',
             node: {
               __typename: 'PokemonNode',
-              id: '45',
+              id: 'vileplume',
+              pokedexNumber: 45,
               name: 'Vileplume',
               baseExperience: 221,
               order: 76,
@@ -1085,10 +1195,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -1099,7 +1211,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDU',
             node: {
               __typename: 'PokemonNode',
-              id: '46',
+              id: 'paras',
+              pokedexNumber: 46,
               name: 'Paras',
               baseExperience: 57,
               order: 78,
@@ -1111,10 +1224,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
               ],
@@ -1125,7 +1240,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDY',
             node: {
               __typename: 'PokemonNode',
-              id: '47',
+              id: 'parasect',
+              pokedexNumber: 47,
               name: 'Parasect',
               baseExperience: 142,
               order: 79,
@@ -1137,10 +1253,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'grass',
                   name: 'Grass',
                 },
               ],
@@ -1151,7 +1269,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDc',
             node: {
               __typename: 'PokemonNode',
-              id: '48',
+              id: 'venonat',
+              pokedexNumber: 48,
               name: 'Venonat',
               baseExperience: 61,
               order: 80,
@@ -1163,10 +1282,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -1177,7 +1298,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDg',
             node: {
               __typename: 'PokemonNode',
-              id: '49',
+              id: 'venomoth',
+              pokedexNumber: 49,
               name: 'Venomoth',
               baseExperience: 158,
               order: 81,
@@ -1189,10 +1311,12 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'bug',
                   name: 'Bug',
                 },
                 {
                   __typename: 'Item',
+                  id: 'poison',
                   name: 'Poison',
                 },
               ],
@@ -1203,7 +1327,8 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
             cursor: 'NDk',
             node: {
               __typename: 'PokemonNode',
-              id: '50',
+              id: 'diglett',
+              pokedexNumber: 50,
               name: 'Diglett',
               baseExperience: 53,
               order: 82,
@@ -1215,6 +1340,7 @@ export const mockedListPokemonQuery: MockedResponse<ListPokemonQuery> = {
               types: [
                 {
                   __typename: 'Item',
+                  id: 'ground',
                   name: 'Ground',
                 },
               ],
