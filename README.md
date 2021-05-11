@@ -6,6 +6,8 @@ Pokédex web application showcasing a full-stack web application built with Reac
 
 All data is requested from [PokeAPI](https://pokeapi.co/docs/v2).
 
+### [Try it here.](https://d1ruwbi83dcwv2.cloudfront.net/)
+
 ## Setup
 
 1. Run `yarn setup`.
