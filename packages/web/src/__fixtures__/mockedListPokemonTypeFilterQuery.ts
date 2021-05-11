@@ -24,7 +24,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MA',
             node: {
               __typename: 'PokemonNode',
-              id: '16',
+              id: 'pidgey',
+              pokedexNumber: 16,
               name: 'Pidgey',
               baseExperience: 50,
               order: 21,
@@ -36,10 +37,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -50,7 +53,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MQ',
             node: {
               __typename: 'PokemonNode',
-              id: '17',
+              id: 'pidgeotto',
+              pokedexNumber: 17,
               name: 'Pidgeotto',
               baseExperience: 122,
               order: 22,
@@ -62,10 +66,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -76,7 +82,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mg',
             node: {
               __typename: 'PokemonNode',
-              id: '18',
+              id: 'pidgeot',
+              pokedexNumber: 18,
               name: 'Pidgeot',
               baseExperience: 216,
               order: 23,
@@ -88,10 +95,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -102,7 +111,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mw',
             node: {
               __typename: 'PokemonNode',
-              id: '19',
+              id: 'rattata',
+              pokedexNumber: 19,
               name: 'Rattata',
               baseExperience: 51,
               order: 25,
@@ -114,6 +124,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -124,7 +135,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NA',
             node: {
               __typename: 'PokemonNode',
-              id: '20',
+              id: 'raticate',
+              pokedexNumber: 20,
               name: 'Raticate',
               baseExperience: 145,
               order: 27,
@@ -136,6 +148,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -146,7 +159,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NQ',
             node: {
               __typename: 'PokemonNode',
-              id: '21',
+              id: 'spearow',
+              pokedexNumber: 21,
               name: 'Spearow',
               baseExperience: 52,
               order: 30,
@@ -158,10 +172,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -172,7 +188,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Ng',
             node: {
               __typename: 'PokemonNode',
-              id: '22',
+              id: 'fearow',
+              pokedexNumber: 22,
               name: 'Fearow',
               baseExperience: 155,
               order: 31,
@@ -184,10 +201,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -198,7 +217,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Nw',
             node: {
               __typename: 'PokemonNode',
-              id: '39',
+              id: 'jigglypuff',
+              pokedexNumber: 39,
               name: 'Jigglypuff',
               baseExperience: 95,
               order: 69,
@@ -210,10 +230,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -224,7 +246,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'OA',
             node: {
               __typename: 'PokemonNode',
-              id: '40',
+              id: 'wigglytuff',
+              pokedexNumber: 40,
               name: 'Wigglytuff',
               baseExperience: 196,
               order: 70,
@@ -236,10 +259,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -250,7 +275,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'OQ',
             node: {
               __typename: 'PokemonNode',
-              id: '52',
+              id: 'meowth',
+              pokedexNumber: 52,
               name: 'Meowth',
               baseExperience: 58,
               order: 86,
@@ -262,6 +288,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -272,7 +299,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTA',
             node: {
               __typename: 'PokemonNode',
-              id: '53',
+              id: 'persian',
+              pokedexNumber: 53,
               name: 'Persian',
               baseExperience: 154,
               order: 88,
@@ -284,6 +312,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -294,7 +323,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTE',
             node: {
               __typename: 'PokemonNode',
-              id: '83',
+              id: 'farfetchd',
+              pokedexNumber: 83,
               name: 'Farfetchd',
               baseExperience: 132,
               order: 127,
@@ -306,10 +336,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -320,7 +352,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTI',
             node: {
               __typename: 'PokemonNode',
-              id: '84',
+              id: 'doduo',
+              pokedexNumber: 84,
               name: 'Doduo',
               baseExperience: 62,
               order: 128,
@@ -332,10 +365,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -346,7 +381,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTM',
             node: {
               __typename: 'PokemonNode',
-              id: '85',
+              id: 'dodrio',
+              pokedexNumber: 85,
               name: 'Dodrio',
               baseExperience: 165,
               order: 129,
@@ -358,10 +394,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -372,7 +410,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTQ',
             node: {
               __typename: 'PokemonNode',
-              id: '108',
+              id: 'lickitung',
+              pokedexNumber: 108,
               name: 'Lickitung',
               baseExperience: 77,
               order: 162,
@@ -384,6 +423,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -394,7 +434,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTU',
             node: {
               __typename: 'PokemonNode',
-              id: '113',
+              id: 'chansey',
+              pokedexNumber: 113,
               name: 'Chansey',
               baseExperience: 395,
               order: 170,
@@ -406,6 +447,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -416,7 +458,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTY',
             node: {
               __typename: 'PokemonNode',
-              id: '115',
+              id: 'kangaskhan',
+              pokedexNumber: 115,
               name: 'Kangaskhan',
               baseExperience: 172,
               order: 174,
@@ -428,6 +471,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -438,7 +482,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTc',
             node: {
               __typename: 'PokemonNode',
-              id: '128',
+              id: 'tauros',
+              pokedexNumber: 128,
               name: 'Tauros',
               baseExperience: 172,
               order: 198,
@@ -450,6 +495,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -460,7 +506,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTg',
             node: {
               __typename: 'PokemonNode',
-              id: '132',
+              id: 'ditto',
+              pokedexNumber: 132,
               name: 'Ditto',
               baseExperience: 101,
               order: 203,
@@ -472,6 +519,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -482,7 +530,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTk',
             node: {
               __typename: 'PokemonNode',
-              id: '133',
+              id: 'eevee',
+              pokedexNumber: 133,
               name: 'Eevee',
               baseExperience: 65,
               order: 204,
@@ -494,6 +543,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -504,7 +554,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MjA',
             node: {
               __typename: 'PokemonNode',
-              id: '137',
+              id: 'porygon',
+              pokedexNumber: 137,
               name: 'Porygon',
               baseExperience: 79,
               order: 213,
@@ -516,6 +567,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -526,7 +578,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MjE',
             node: {
               __typename: 'PokemonNode',
-              id: '143',
+              id: 'snorlax',
+              pokedexNumber: 143,
               name: 'Snorlax',
               baseExperience: 189,
               order: 223,
@@ -538,6 +591,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -548,7 +602,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MjI',
             node: {
               __typename: 'PokemonNode',
-              id: '161',
+              id: 'sentret',
+              pokedexNumber: 161,
               name: 'Sentret',
               baseExperience: 43,
               order: 243,
@@ -560,6 +615,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -570,7 +626,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MjM',
             node: {
               __typename: 'PokemonNode',
-              id: '162',
+              id: 'furret',
+              pokedexNumber: 162,
               name: 'Furret',
               baseExperience: 145,
               order: 244,
@@ -582,6 +639,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -592,7 +650,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MjQ',
             node: {
               __typename: 'PokemonNode',
-              id: '163',
+              id: 'hoothoot',
+              pokedexNumber: 163,
               name: 'Hoothoot',
               baseExperience: 52,
               order: 245,
@@ -604,10 +663,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -618,7 +679,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MjU',
             node: {
               __typename: 'PokemonNode',
-              id: '164',
+              id: 'noctowl',
+              pokedexNumber: 164,
               name: 'Noctowl',
               baseExperience: 158,
               order: 246,
@@ -630,10 +692,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -644,7 +708,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MjY',
             node: {
               __typename: 'PokemonNode',
-              id: '174',
+              id: 'igglybuff',
+              pokedexNumber: 174,
               name: 'Igglybuff',
               baseExperience: 42,
               order: 68,
@@ -656,10 +721,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -670,7 +737,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mjc',
             node: {
               __typename: 'PokemonNode',
-              id: '190',
+              id: 'aipom',
+              pokedexNumber: 190,
               name: 'Aipom',
               baseExperience: 72,
               order: 270,
@@ -682,6 +750,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -692,7 +761,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mjg',
             node: {
               __typename: 'PokemonNode',
-              id: '203',
+              id: 'girafarig',
+              pokedexNumber: 203,
               name: 'Girafarig',
               baseExperience: 159,
               order: 285,
@@ -704,10 +774,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'psychic',
                   name: 'Psychic',
                 },
               ],
@@ -718,7 +790,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mjk',
             node: {
               __typename: 'PokemonNode',
-              id: '206',
+              id: 'dunsparce',
+              pokedexNumber: 206,
               name: 'Dunsparce',
               baseExperience: 145,
               order: 288,
@@ -730,6 +803,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -740,7 +814,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MzA',
             node: {
               __typename: 'PokemonNode',
-              id: '216',
+              id: 'teddiursa',
+              pokedexNumber: 216,
               name: 'Teddiursa',
               baseExperience: 66,
               order: 299,
@@ -752,6 +827,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -762,7 +838,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MzE',
             node: {
               __typename: 'PokemonNode',
-              id: '217',
+              id: 'ursaring',
+              pokedexNumber: 217,
               name: 'Ursaring',
               baseExperience: 175,
               order: 300,
@@ -774,6 +851,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -784,7 +862,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MzI',
             node: {
               __typename: 'PokemonNode',
-              id: '233',
+              id: 'porygon2',
+              pokedexNumber: 233,
               name: 'Porygon2',
               baseExperience: 180,
               order: 214,
@@ -796,6 +875,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -806,7 +886,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MzM',
             node: {
               __typename: 'PokemonNode',
-              id: '234',
+              id: 'stantler',
+              pokedexNumber: 234,
               name: 'Stantler',
               baseExperience: 163,
               order: 318,
@@ -818,6 +899,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -828,7 +910,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MzQ',
             node: {
               __typename: 'PokemonNode',
-              id: '235',
+              id: 'smeargle',
+              pokedexNumber: 235,
               name: 'Smeargle',
               baseExperience: 88,
               order: 319,
@@ -840,6 +923,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -850,7 +934,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MzU',
             node: {
               __typename: 'PokemonNode',
-              id: '241',
+              id: 'miltank',
+              pokedexNumber: 241,
               name: 'Miltank',
               baseExperience: 172,
               order: 320,
@@ -862,6 +947,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -872,7 +958,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MzY',
             node: {
               __typename: 'PokemonNode',
-              id: '242',
+              id: 'blissey',
+              pokedexNumber: 242,
               name: 'Blissey',
               baseExperience: 608,
               order: 171,
@@ -884,6 +971,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -894,7 +982,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mzc',
             node: {
               __typename: 'PokemonNode',
-              id: '263',
+              id: 'zigzagoon',
+              pokedexNumber: 263,
               name: 'Zigzagoon',
               baseExperience: 56,
               order: 345,
@@ -906,6 +995,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -916,7 +1006,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mzg',
             node: {
               __typename: 'PokemonNode',
-              id: '264',
+              id: 'linoone',
+              pokedexNumber: 264,
               name: 'Linoone',
               baseExperience: 147,
               order: 346,
@@ -928,6 +1019,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -938,7 +1030,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mzk',
             node: {
               __typename: 'PokemonNode',
-              id: '276',
+              id: 'taillow',
+              pokedexNumber: 276,
               name: 'Taillow',
               baseExperience: 54,
               order: 358,
@@ -950,10 +1043,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -964,7 +1059,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDA',
             node: {
               __typename: 'PokemonNode',
-              id: '277',
+              id: 'swellow',
+              pokedexNumber: 277,
               name: 'Swellow',
               baseExperience: 159,
               order: 359,
@@ -976,10 +1072,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'flying',
                   name: 'Flying',
                 },
               ],
@@ -990,7 +1088,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDE',
             node: {
               __typename: 'PokemonNode',
-              id: '287',
+              id: 'slakoth',
+              pokedexNumber: 287,
               name: 'Slakoth',
               baseExperience: 56,
               order: 372,
@@ -1002,6 +1101,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -1012,7 +1112,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDI',
             node: {
               __typename: 'PokemonNode',
-              id: '288',
+              id: 'vigoroth',
+              pokedexNumber: 288,
               name: 'Vigoroth',
               baseExperience: 154,
               order: 373,
@@ -1024,6 +1125,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -1034,7 +1136,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDM',
             node: {
               __typename: 'PokemonNode',
-              id: '289',
+              id: 'slaking',
+              pokedexNumber: 289,
               name: 'Slaking',
               baseExperience: 252,
               order: 374,
@@ -1046,6 +1149,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -1056,7 +1160,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDQ',
             node: {
               __typename: 'PokemonNode',
-              id: '293',
+              id: 'whismur',
+              pokedexNumber: 293,
               name: 'Whismur',
               baseExperience: 48,
               order: 378,
@@ -1068,6 +1173,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -1078,7 +1184,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDU',
             node: {
               __typename: 'PokemonNode',
-              id: '294',
+              id: 'loudred',
+              pokedexNumber: 294,
               name: 'Loudred',
               baseExperience: 126,
               order: 379,
@@ -1090,6 +1197,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -1100,7 +1208,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDY',
             node: {
               __typename: 'PokemonNode',
-              id: '295',
+              id: 'exploud',
+              pokedexNumber: 295,
               name: 'Exploud',
               baseExperience: 221,
               order: 380,
@@ -1112,6 +1221,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -1122,7 +1232,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDc',
             node: {
               __typename: 'PokemonNode',
-              id: '298',
+              id: 'azurill',
+              pokedexNumber: 298,
               name: 'Azurill',
               baseExperience: 38,
               order: 262,
@@ -1134,10 +1245,12 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
                 {
                   __typename: 'Item',
+                  id: 'fairy',
                   name: 'Fairy',
                 },
               ],
@@ -1148,7 +1261,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDg',
             node: {
               __typename: 'PokemonNode',
-              id: '300',
+              id: 'skitty',
+              pokedexNumber: 300,
               name: 'Skitty',
               baseExperience: 52,
               order: 385,
@@ -1160,6 +1274,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],
@@ -1170,7 +1285,8 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NDk',
             node: {
               __typename: 'PokemonNode',
-              id: '301',
+              id: 'delcatty',
+              pokedexNumber: 301,
               name: 'Delcatty',
               baseExperience: 140,
               order: 386,
@@ -1182,6 +1298,7 @@ export const mockedListPokemonTypeFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'normal',
                   name: 'Normal',
                 },
               ],

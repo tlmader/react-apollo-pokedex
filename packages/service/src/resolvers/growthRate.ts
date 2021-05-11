@@ -4,6 +4,7 @@ import {
   PokemonSpecies,
   PokemonSpeciesResolvers,
 } from '../types';
+import { formatName } from '../utils/string';
 
 type PokemonGrowthRateResolver = PokemonSpeciesResolvers<
   Context,
@@ -15,13 +16,13 @@ export const growthRate: PokemonGrowthRateResolver = async (
   _,
   { dataSources }: Context,
 ): Promise<PokemonGrowthRate | null> => {
-  const name = parent?.growthRate?.name;
-  if (!name) {
+  const id = parent?.growthRate?.id;
+  if (!id) {
     return null;
   }
-  return dataSources.pokeAPI.getGrowthRate(name).then((resource) => ({
-    name,
-    id: resource.id.toString(),
+  return dataSources.pokeAPI.getGrowthRate(id).then((resource) => ({
+    id,
+    name: formatName(resource.name),
     formula: resource.formula,
     levels: resource.levels,
   }));

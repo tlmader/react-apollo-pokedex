@@ -5,14 +5,15 @@ export const mockedGetPokemonQuery: MockedResponse<GetPokemonQuery> = {
   request: {
     query: GetPokemonDocument,
     variables: {
-      id: '1',
+      id: 'bulbasaur',
     },
   },
   result: {
     data: {
       getPokemon: {
         __typename: 'PokemonNode',
-        id: '1',
+        id: 'bulbasaur',
+        pokedexNumber: 1,
         name: 'Bulbasaur',
         baseExperience: 64,
         height: 7,
@@ -36,10 +37,12 @@ export const mockedGetPokemonQuery: MockedResponse<GetPokemonQuery> = {
         abilities: [
           {
             __typename: 'Item',
+            id: 'overgrow',
             name: 'Overgrow',
           },
           {
             __typename: 'Item',
+            id: 'chlorophyll',
             name: 'Chlorophyll',
           },
         ],
@@ -47,323 +50,401 @@ export const mockedGetPokemonQuery: MockedResponse<GetPokemonQuery> = {
         moves: [
           {
             __typename: 'Item',
+            id: 'razor-wind',
             name: 'Razor Wind',
           },
           {
             __typename: 'Item',
+            id: 'swords-dance',
             name: 'Swords Dance',
           },
           {
             __typename: 'Item',
+            id: 'cut',
             name: 'Cut',
           },
           {
             __typename: 'Item',
+            id: 'bind',
             name: 'Bind',
           },
           {
             __typename: 'Item',
+            id: 'vine-whip',
             name: 'Vine Whip',
           },
           {
             __typename: 'Item',
+            id: 'headbutt',
             name: 'Headbutt',
           },
           {
             __typename: 'Item',
+            id: 'tackle',
             name: 'Tackle',
           },
           {
             __typename: 'Item',
+            id: 'body-slam',
             name: 'Body Slam',
           },
           {
             __typename: 'Item',
+            id: 'take-down',
             name: 'Take Down',
           },
           {
             __typename: 'Item',
+            id: 'double-edge',
             name: 'Double Edge',
           },
           {
             __typename: 'Item',
+            id: 'growl',
             name: 'Growl',
           },
           {
             __typename: 'Item',
+            id: 'strength',
             name: 'Strength',
           },
           {
             __typename: 'Item',
+            id: 'mega-drain',
             name: 'Mega Drain',
           },
           {
             __typename: 'Item',
+            id: 'leech-seed',
             name: 'Leech Seed',
           },
           {
             __typename: 'Item',
+            id: 'growth',
             name: 'Growth',
           },
           {
             __typename: 'Item',
+            id: 'razor-leaf',
             name: 'Razor Leaf',
           },
           {
             __typename: 'Item',
+            id: 'solar-beam',
             name: 'Solar Beam',
           },
           {
             __typename: 'Item',
+            id: 'poison-powder',
             name: 'Poison Powder',
           },
           {
             __typename: 'Item',
+            id: 'sleep-powder',
             name: 'Sleep Powder',
           },
           {
             __typename: 'Item',
+            id: 'petal-dance',
             name: 'Petal Dance',
           },
           {
             __typename: 'Item',
+            id: 'string-shot',
             name: 'String Shot',
           },
           {
             __typename: 'Item',
+            id: 'toxic',
             name: 'Toxic',
           },
           {
             __typename: 'Item',
+            id: 'rage',
             name: 'Rage',
           },
           {
             __typename: 'Item',
+            id: 'mimic',
             name: 'Mimic',
           },
           {
             __typename: 'Item',
+            id: 'double-team',
             name: 'Double Team',
           },
           {
             __typename: 'Item',
+            id: 'defense-curl',
             name: 'Defense Curl',
           },
           {
             __typename: 'Item',
+            id: 'light-screen',
             name: 'Light Screen',
           },
           {
             __typename: 'Item',
+            id: 'reflect',
             name: 'Reflect',
           },
           {
             __typename: 'Item',
+            id: 'bide',
             name: 'Bide',
           },
           {
             __typename: 'Item',
+            id: 'sludge',
             name: 'Sludge',
           },
           {
             __typename: 'Item',
+            id: 'skull-bash',
             name: 'Skull Bash',
           },
           {
             __typename: 'Item',
+            id: 'amnesia',
             name: 'Amnesia',
           },
           {
             __typename: 'Item',
+            id: 'flash',
             name: 'Flash',
           },
           {
             __typename: 'Item',
+            id: 'rest',
             name: 'Rest',
           },
           {
             __typename: 'Item',
+            id: 'substitute',
             name: 'Substitute',
           },
           {
             __typename: 'Item',
+            id: 'snore',
             name: 'Snore',
           },
           {
             __typename: 'Item',
+            id: 'curse',
             name: 'Curse',
           },
           {
             __typename: 'Item',
+            id: 'protect',
             name: 'Protect',
           },
           {
             __typename: 'Item',
+            id: 'sludge-bomb',
             name: 'Sludge Bomb',
           },
           {
             __typename: 'Item',
+            id: 'mud-slap',
             name: 'Mud Slap',
           },
           {
             __typename: 'Item',
+            id: 'giga-drain',
             name: 'Giga Drain',
           },
           {
             __typename: 'Item',
+            id: 'endure',
             name: 'Endure',
           },
           {
             __typename: 'Item',
+            id: 'charm',
             name: 'Charm',
           },
           {
             __typename: 'Item',
+            id: 'swagger',
             name: 'Swagger',
           },
           {
             __typename: 'Item',
+            id: 'fury-cutter',
             name: 'Fury Cutter',
           },
           {
             __typename: 'Item',
+            id: 'attract',
             name: 'Attract',
           },
           {
             __typename: 'Item',
+            id: 'sleep-talk',
             name: 'Sleep Talk',
           },
           {
             __typename: 'Item',
+            id: 'return',
             name: 'Return',
           },
           {
             __typename: 'Item',
+            id: 'frustration',
             name: 'Frustration',
           },
           {
             __typename: 'Item',
+            id: 'safeguard',
             name: 'Safeguard',
           },
           {
             __typename: 'Item',
+            id: 'sweet-scent',
             name: 'Sweet Scent',
           },
           {
             __typename: 'Item',
+            id: 'synthesis',
             name: 'Synthesis',
           },
           {
             __typename: 'Item',
+            id: 'hidden-power',
             name: 'Hidden Power',
           },
           {
             __typename: 'Item',
+            id: 'sunny-day',
             name: 'Sunny Day',
           },
           {
             __typename: 'Item',
+            id: 'rock-smash',
             name: 'Rock Smash',
           },
           {
             __typename: 'Item',
+            id: 'facade',
             name: 'Facade',
           },
           {
             __typename: 'Item',
+            id: 'nature-power',
             name: 'Nature Power',
           },
           {
             __typename: 'Item',
+            id: 'ingrain',
             name: 'Ingrain',
           },
           {
             __typename: 'Item',
+            id: 'knock-off',
             name: 'Knock Off',
           },
           {
             __typename: 'Item',
+            id: 'secret-power',
             name: 'Secret Power',
           },
           {
             __typename: 'Item',
+            id: 'grass-whistle',
             name: 'Grass Whistle',
           },
           {
             __typename: 'Item',
+            id: 'bullet-seed',
             name: 'Bullet Seed',
           },
           {
             __typename: 'Item',
+            id: 'magical-leaf',
             name: 'Magical Leaf',
           },
           {
             __typename: 'Item',
+            id: 'natural-gift',
             name: 'Natural Gift',
           },
           {
             __typename: 'Item',
+            id: 'worry-seed',
             name: 'Worry Seed',
           },
           {
             __typename: 'Item',
+            id: 'seed-bomb',
             name: 'Seed Bomb',
           },
           {
             __typename: 'Item',
+            id: 'energy-ball',
             name: 'Energy Ball',
           },
           {
             __typename: 'Item',
+            id: 'leaf-storm',
             name: 'Leaf Storm',
           },
           {
             __typename: 'Item',
+            id: 'power-whip',
             name: 'Power Whip',
           },
           {
             __typename: 'Item',
+            id: 'captivate',
             name: 'Captivate',
           },
           {
             __typename: 'Item',
+            id: 'grass-knot',
             name: 'Grass Knot',
           },
           {
             __typename: 'Item',
+            id: 'venoshock',
             name: 'Venoshock',
           },
           {
             __typename: 'Item',
+            id: 'round',
             name: 'Round',
           },
           {
             __typename: 'Item',
+            id: 'echoed-voice',
             name: 'Echoed Voice',
           },
           {
             __typename: 'Item',
+            id: 'grass-pledge',
             name: 'Grass Pledge',
           },
           {
             __typename: 'Item',
+            id: 'work-up',
             name: 'Work Up',
           },
           {
             __typename: 'Item',
+            id: 'grassy-terrain',
             name: 'Grassy Terrain',
           },
           {
             __typename: 'Item',
+            id: 'confide',
             name: 'Confide',
           },
         ],
         species: {
           __typename: 'PokemonSpecies',
-          id: '1',
+          id: 'bulbasaur',
           growthRate: {
             __typename: 'PokemonGrowthRate',
-            id: '4',
+            id: 'medium-slow',
             levels: [
               {
                 __typename: 'GrowthRateExperienceLevel',
@@ -871,31 +952,37 @@ export const mockedGetPokemonQuery: MockedResponse<GetPokemonQuery> = {
         stats: [
           {
             __typename: 'Stat',
+            id: 'hp',
             name: 'HP',
             baseStat: 45,
           },
           {
             __typename: 'Stat',
+            id: 'attack',
             name: 'Attack',
             baseStat: 49,
           },
           {
             __typename: 'Stat',
+            id: 'defense',
             name: 'Defense',
             baseStat: 49,
           },
           {
             __typename: 'Stat',
+            id: 'special-attack',
             name: 'Special Attack',
             baseStat: 65,
           },
           {
             __typename: 'Stat',
+            id: 'special-defense',
             name: 'Special Defense',
             baseStat: 65,
           },
           {
             __typename: 'Stat',
+            id: 'speed',
             name: 'Speed',
             baseStat: 45,
           },
@@ -903,10 +990,12 @@ export const mockedGetPokemonQuery: MockedResponse<GetPokemonQuery> = {
         types: [
           {
             __typename: 'Item',
+            id: 'grass',
             name: 'Grass',
           },
           {
             __typename: 'Item',
+            id: 'poison',
             name: 'Poison',
           },
         ],

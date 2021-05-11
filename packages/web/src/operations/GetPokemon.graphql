@@ -1,6 +1,7 @@
 query GetPokemon($id: ID!) {
   getPokemon(id: $id) {
     id
+    pokedexNumber
     name
     baseExperience
     height
@@ -17,12 +18,15 @@ query GetPokemon($id: ID!) {
       frontShinyFemale
     }
     abilities {
+      id
       name
     }
     heldItems {
+      id
       name
     }
     moves {
+      id
       name
     }
     species {
@@ -36,10 +40,12 @@ query GetPokemon($id: ID!) {
       }
     }
     stats {
+      id
       name
       baseStat
     }
     types {
+      id
       name
     }
   }

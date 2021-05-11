@@ -78,7 +78,7 @@ export const SpriteView = () => {
       <CardMedia
         className={styles.media}
         image={getSprite() || undefined}
-        title={pokemon.name}
+        title={pokemon.name || ''}
       />
       <CardActions className={styles.cardActions}>
         {pokemon.sprites?.backDefault && (

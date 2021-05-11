@@ -16,12 +16,13 @@ export class PokeAPI extends RESTDataSource {
   }
 
   /**
-   * Hyphenated name (e.g., ho-oh) can also be used instead of id
+   * We are using name as id across the application because it is included
+   * in NamedAPIResource.
    * https://pokeapi.co/docs/v2#pokemon
    */
-  async getPokemon(idOrName: string): Promise<Pokemon> {
+  async getPokemon(id: string): Promise<Pokemon> {
     // Send a GET request to the specified endpoint
-    return this.get(`pokemon/${idOrName}`);
+    return this.get(`pokemon/${id}`);
   }
 
   /**
@@ -45,21 +46,21 @@ export class PokeAPI extends RESTDataSource {
   /**
    * https://pokeapi.co/docs/v2#pokemon-species
    */
-  async getSpecies(idOrName: string): Promise<Species> {
-    return this.get(`pokemon-species/${idOrName}`);
+  async getSpecies(id: string): Promise<Species> {
+    return this.get(`pokemon-species/${id}`);
   }
 
   /**
    * https://pokeapi.co/docs/v2#types
    */
-  async getType(idOrName: string): Promise<Type> {
-    return this.get(`type/${idOrName}`);
+  async getType(id: string): Promise<Type> {
+    return this.get(`type/${id}`);
   }
 
   /**
    * https://pokeapi.co/docs/v2#types
    */
-  async getGrowthRate(idOrName: string): Promise<GrowthRate> {
-    return this.get(`growth-rate/${idOrName}`);
+  async getGrowthRate(id: string): Promise<GrowthRate> {
+    return this.get(`growth-rate/${id}`);
   }
 }

@@ -8,7 +8,7 @@ export const formatPokemonCaption = (
     return '';
   }
   const types = pokemon?.types?.map((type) => type?.name);
-  return `${pokemon?.id} • ${types?.join('/')}`;
+  return `${pokemon?.pokedexNumber} • ${types?.join('/')}`;
 };
 
 /**

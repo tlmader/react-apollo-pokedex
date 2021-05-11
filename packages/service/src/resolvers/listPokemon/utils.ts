@@ -6,12 +6,12 @@ import {
   PokemonEdge,
   PokemonFilterInput,
   PokemonSortInput,
-  Sort,
+  Sort
 } from '../../types';
 import { sortPokemonResources } from '../../utils/sort';
 import {
   speciesToPokemonResource,
-  typeToPokemonResource,
+  typeToPokemonResource
 } from '../../utils/transform';
 
 /**
@@ -74,7 +74,6 @@ export const getPokemonResources = async (
       previous,
       next,
     } = await dataSources.pokeAPI.getPokemonResourceList(first, offset);
-    console.log({ next });
 
     resources = results;
     // If we are using the paged resource list, set PageInfo flags and totalCount here

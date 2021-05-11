@@ -11,10 +11,12 @@ enum Sort {
 }
 
 type Item {
+  id: ID!
   name: String!
 }
 
 type Stat {
+  id: ID!
   name: String!
   baseStat: Int!
 }
@@ -49,8 +51,9 @@ type PokemonSpecies {
 }
 
 type PokemonNode {
-  id: ID
-  name: String!
+  id: ID!
+  pokedexNumber: Int
+  name: String
   baseExperience: Int
   height: Int
   order: Int

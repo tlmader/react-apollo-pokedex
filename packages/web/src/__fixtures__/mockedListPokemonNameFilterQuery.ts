@@ -26,7 +26,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MA',
             node: {
               __typename: 'PokemonNode',
-              id: '25',
+              id: 'pikachu',
+              pokedexNumber: 25,
               name: 'Pikachu',
               baseExperience: 112,
               order: 35,
@@ -38,6 +39,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -48,7 +50,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MQ',
             node: {
               __typename: 'PokemonNode',
-              id: '10080',
+              id: 'pikachu-rock-star',
+              pokedexNumber: 10080,
               name: 'Pikachu Rock Star',
               baseExperience: 112,
               order: 37,
@@ -60,6 +63,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -70,7 +74,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mg',
             node: {
               __typename: 'PokemonNode',
-              id: '10081',
+              id: 'pikachu-belle',
+              pokedexNumber: 10081,
               name: 'Pikachu Belle',
               baseExperience: 112,
               order: 38,
@@ -82,6 +87,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -92,7 +98,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Mw',
             node: {
               __typename: 'PokemonNode',
-              id: '10082',
+              id: 'pikachu-pop-star',
+              pokedexNumber: 10082,
               name: 'Pikachu Pop Star',
               baseExperience: 112,
               order: 39,
@@ -104,6 +111,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -114,7 +122,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NA',
             node: {
               __typename: 'PokemonNode',
-              id: '10083',
+              id: 'pikachu-phd',
+              pokedexNumber: 10083,
               name: 'Pikachu Phd',
               baseExperience: 112,
               order: 40,
@@ -126,6 +135,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -136,7 +146,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'NQ',
             node: {
               __typename: 'PokemonNode',
-              id: '10084',
+              id: 'pikachu-libre',
+              pokedexNumber: 10084,
               name: 'Pikachu Libre',
               baseExperience: 112,
               order: 41,
@@ -148,6 +159,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -158,7 +170,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Ng',
             node: {
               __typename: 'PokemonNode',
-              id: '10085',
+              id: 'pikachu-cosplay',
+              pokedexNumber: 10085,
               name: 'Pikachu Cosplay',
               baseExperience: 112,
               order: 36,
@@ -170,6 +183,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -180,7 +194,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'Nw',
             node: {
               __typename: 'PokemonNode',
-              id: '10094',
+              id: 'pikachu-original-cap',
+              pokedexNumber: 10094,
               name: 'Pikachu Original Cap',
               baseExperience: 112,
               order: 42,
@@ -192,6 +207,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -202,7 +218,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'OA',
             node: {
               __typename: 'PokemonNode',
-              id: '10095',
+              id: 'pikachu-hoenn-cap',
+              pokedexNumber: 10095,
               name: 'Pikachu Hoenn Cap',
               baseExperience: 112,
               order: 43,
@@ -214,6 +231,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -224,7 +242,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'OQ',
             node: {
               __typename: 'PokemonNode',
-              id: '10096',
+              id: 'pikachu-sinnoh-cap',
+              pokedexNumber: 10096,
               name: 'Pikachu Sinnoh Cap',
               baseExperience: 112,
               order: 44,
@@ -236,6 +255,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -246,7 +266,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTA',
             node: {
               __typename: 'PokemonNode',
-              id: '10097',
+              id: 'pikachu-unova-cap',
+              pokedexNumber: 10097,
               name: 'Pikachu Unova Cap',
               baseExperience: 112,
               order: 45,
@@ -258,6 +279,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -268,7 +290,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTE',
             node: {
               __typename: 'PokemonNode',
-              id: '10098',
+              id: 'pikachu-kalos-cap',
+              pokedexNumber: 10098,
               name: 'Pikachu Kalos Cap',
               baseExperience: 112,
               order: 46,
@@ -280,6 +303,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -290,7 +314,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTI',
             node: {
               __typename: 'PokemonNode',
-              id: '10099',
+              id: 'pikachu-alola-cap',
+              pokedexNumber: 10099,
               name: 'Pikachu Alola Cap',
               baseExperience: 112,
               order: 47,
@@ -302,6 +327,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -312,7 +338,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTM',
             node: {
               __typename: 'PokemonNode',
-              id: '10148',
+              id: 'pikachu-partner-cap',
+              pokedexNumber: 10148,
               name: 'Pikachu Partner Cap',
               baseExperience: 112,
               order: 48,
@@ -324,6 +351,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
@@ -334,7 +362,8 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
             cursor: 'MTQ',
             node: {
               __typename: 'PokemonNode',
-              id: '10190',
+              id: 'pikachu-gmax',
+              pokedexNumber: 10190,
               name: 'Pikachu Gmax',
               baseExperience: 112,
               order: -1,
@@ -346,6 +375,7 @@ export const mockedListPokemonNameFilterQuery: MockedResponse<ListPokemonQuery> 
               types: [
                 {
                   __typename: 'Item',
+                  id: 'electric',
                   name: 'Electric',
                 },
               ],
