@@ -14,7 +14,7 @@ import { PokemonNode } from '../../types';
 import { formatPokemonCaption } from '../../utils';
 
 export type PokemonListItemProps = {
-  pokemon?: Partial<PokemonNode>;
+  pokemon?: Partial<PokemonNode> | null;
   style: CSSProperties;
 };
 
@@ -26,6 +26,10 @@ export const PokemonListItem = memo(function ({
   const styles = useStyles();
 
   const setSelectedPokemon = useSetRecoilState(selectedPokemonState);
+
+  if (!pokemon) {
+    return null;
+  }
 
   const handleClick = () => setSelectedPokemon(pokemon);
 

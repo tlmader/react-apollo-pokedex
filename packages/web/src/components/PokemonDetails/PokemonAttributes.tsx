@@ -6,25 +6,37 @@ import { PokemonGrowthChart } from './PokemonGrowthChart';
 export const PokemonAttributes = () => {
   const { pokemon } = usePokemonDetails();
 
-  const attributes: AttributeTableTuple[] = pokemon
-    ? [
-        ['Base Experience', `${pokemon.baseExperience} XP`],
-        ['Weight', `${pokemon.weight / 10}kg`],
-        ['Height', `${pokemon.height / 10}m`],
-      ]
-    : [];
+  if (!pokemon) {
+    return null;
+  }
 
-  const stats: AttributeTableTuple[] =
-    pokemon?.stats?.map((stat) => [stat?.name, stat?.baseStat]) || [];
+  const {
+    baseExperience,
+    weight,
+    height,
+    abilities,
+    heldItems,
+    moves,
+    stats,
+  } = pokemon;
 
-  return pokemon ? (
+  const attributes: AttributeTableTuple[] = [
+    ['Base Experience', `${baseExperience} XP`],
+    ['Weight', weight ? `${weight / 10}kg` : '?'],
+    ['Height', height ? `${height / 10}m` : '?'],
+  ];
+
+  const statAttributes: AttributeTableTuple[] =
+    stats?.map((stat) => [stat?.name, stat?.baseStat]) || [];
+
+  return (
     <>
       <AttributeTable attributes={attributes} />
       <PokemonGrowthChart />
-      <AttributeTable attributes={stats} />
-      <AttributeList items={pokemon.abilities} title="Possible Abilities" />
-      <AttributeList items={pokemon.heldItems} title="Held Items" />
-      <AttributeList items={pokemon.moves} title="Learnable Moves" />
+      <AttributeTable attributes={statAttributes} />
+      <AttributeList items={abilities} title="Possible Abilities" />
+      <AttributeList items={heldItems} title="Held Items" />
+      <AttributeList items={moves} title="Learnable Moves" />
     </>
-  ) : null;
+  );
 };

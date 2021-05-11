@@ -52,6 +52,17 @@ export const pokemonToPokemonNode = (pokemon: Pokemon): PokemonNode => ({
     })),
 });
 
+export const resourceToEdge = (offset: number) => (
+  resource: NamedAPIResource,
+  index: number,
+): PokemonEdge => ({
+  // Use index to create the cursor so that it works with filtered or sorted lists
+  cursor: toCursor(offset + index),
+  node: {
+    name: resource.name,
+  },
+});
+
 export const pokemonToEdge = (offset: number) => (
   pokemon: Pokemon,
   index: number,
